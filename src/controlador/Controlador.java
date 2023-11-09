@@ -1,9 +1,11 @@
 package controlador;
-
+import java.util.ArrayList;
+import java.util.Properties;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.Properties;
 import java.util.Scanner;
+import java.util.Set;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.io.BufferedReader;
@@ -15,18 +17,27 @@ public class Controlador {
 
 	    public static void main(String[] args) {
 	        try {
-	            // URL de la ciudad de ejemplo
-	            String cityURL = "https://worldweather.wmo.int/es/json/1240_es.xml";
-
-	            // Obtener datos climáticos de la ciudad
-	            String weatherData = fetchDataFromURL(cityURL);
-
-	            // Parsear la información y guardarla como JSON
-	            ObjectMapper objectMapper = new ObjectMapper();
-	            objectMapper.writeValue(new File("city_weather.json"), objectMapper.readValue(weatherData, Object.class));
-	            System.out.println("Datos climáticos guardados en city_weather.json");
+	        	FileWriter fw = null;
+	        	ArrayList<String> ciudad = new ArrayList(); 
+	        	rellenoCiudades(ciudad);
+	            Properties configuracion = new Properties();
+	            configuracion.load(new FileReader("src/controlador/config.properties"));
+	            Set<String> ciudades = configuracion.stringPropertyNames();
+	            for (int i = 0; i<ciudad.size();i++) {
+	            System.out.println(ciudad.get(i)+".json");
+	            String fichero = configuracion.getProperty(ciudad.get(i));
 	            
-	            System.out.println(weatherData);
+	            
+	            String ciuTem = fetchDataFromURL(fichero);
+	   
+	            File ficher = new File("files/"+ciudad.get(i)+".json");
+	            fw = new FileWriter(ficher);
+    			fw.write(ciuTem);
+    			fw.flush();
+	            System.out.println("Datos climáticos guardados en un .json");
+	            
+	            System.out.println(ciuTem);
+	            }
 	        } catch (IOException e) {
 	            e.printStackTrace();
 	        }
@@ -49,5 +60,21 @@ public class Controlador {
 
 	        return result.toString();
 	    }
+	    public static void rellenoCiudades(ArrayList<String> ciudad) {
+	    	ciudad.add("zaragoza"); ciudad.add("santander"); ciudad.add("burgos"); ciudad.add("melilla");
+	    	ciudad.add("huesca"); ciudad.add("oviedo"); ciudad.add("salamanca"); 
+	    	ciudad.add("ciudad_real"); ciudad.add("san_sebastian"); ciudad.add("madrid"); 
+	    	ciudad.add("toledo"); ciudad.add("vitoria"); ciudad.add("caceres"); 
+	    	ciudad.add("albacete"); ciudad.add("pamplona"); ciudad.add("merida"); 
+	    	ciudad.add("sevilla"); ciudad.add("logrono"); ciudad.add("valencia"); 
+	    	ciudad.add("granada"); ciudad.add("barcelona"); ciudad.add("alicante"); 
+	    	ciudad.add("cadiz"); ciudad.add("gerona"); ciudad.add("palma"); 
+	    	ciudad.add("cordoba"); ciudad.add("tarragona"); ciudad.add("santa_cruz_tenerife"); 
+	    	ciudad.add("cartagena"); ciudad.add("leon"); ciudad.add("santa_cruz_palma"); 
+	    	ciudad.add("santiago"); ciudad.add("valladolid"); ciudad.add("ceuta"); 
+	    	
+			
+			
+		}
 	}
-
+	

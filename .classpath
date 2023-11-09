@@ -15,5 +15,6 @@
 	<classpathentry kind="lib" path="C:/Users/Juan Carlos/Documents/2 DAM/Interfaces/Meteorologia_España/lib/jackson-databind-2.9.9.jar"/>
 	<classpathentry kind="lib" path="C:/Users/Juan Carlos/Documents/2 DAM/Interfaces/Meteorologia_España/lib/jackson-databind-2.9.9-javadoc.jar"/>
 	<classpathentry kind="lib" path="C:/Users/Juan Carlos/Documents/2 DAM/Interfaces/Meteorologia_España/lib/jackson-databind-2.9.9-sources.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Juan Carlos/Documents/2 DAM/Interfaces/Meteorologia_España/lib/gson-2.8.2.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
