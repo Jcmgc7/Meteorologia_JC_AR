@@ -163,7 +163,7 @@ public class Vista extends JFrame {
 		contentPane.add(btnNewButton);
 		
 		JLabel lblNewLabel = new JLabel("New label");
-		lblNewLabel.setIcon(new ImageIcon("src/img/img/mapeja.png"));
+		lblNewLabel.setIcon(new ImageIcon("src/img/mapeja.png"));
 		lblNewLabel.setBounds(1, 1, 592, 539);
 		contentPane.add(lblNewLabel);
 	}
