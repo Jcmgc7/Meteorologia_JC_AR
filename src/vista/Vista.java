@@ -158,12 +158,12 @@ public class Vista extends JFrame {
 		contentPane.add(btnNewButton_1);
 		
 		JButton btnNewButton = new JButton("New button");
-		btnNewButton.setIcon(new ImageIcon("src/img/sol.png"));
+		btnNewButton.setIcon(new ImageIcon("C:\\Users\\Antonio\\git\\Meteorologia_JC_AR\\img\\sol.png"));
 		btnNewButton.setBounds(506, 112, 36, 31);
 		contentPane.add(btnNewButton);
 		
 		JLabel lblNewLabel = new JLabel("New label");
-		lblNewLabel.setIcon(new ImageIcon("src/img/mapeja.png"));
+		lblNewLabel.setIcon(new ImageIcon("C:\\Users\\Antonio\\git\\Meteorologia_JC_AR\\img\\mapeja.png"));
 		lblNewLabel.setBounds(1, 1, 592, 539);
 		contentPane.add(lblNewLabel);
 	}

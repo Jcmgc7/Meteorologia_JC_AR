@@ -6,15 +6,15 @@
 			<attribute name="module" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="C:/Users/Juan Carlos/Documents/2 DAM/Interfaces/Meteorologia_España/lib/jackson-annotations-2.9.9.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Juan Carlos/Documents/2 DAM/Interfaces/Meteorologia_España/lib/jackson-annotations-2.9.9-javadoc.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Juan Carlos/Documents/2 DAM/Interfaces/Meteorologia_España/lib/jackson-annotations-2.9.9-sources.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Juan Carlos/Documents/2 DAM/Interfaces/Meteorologia_España/lib/jackson-core-2.9.9.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Juan Carlos/Documents/2 DAM/Interfaces/Meteorologia_España/lib/jackson-core-2.9.9-javadoc.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Juan Carlos/Documents/2 DAM/Interfaces/Meteorologia_España/lib/jackson-core-2.9.9-sources.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Juan Carlos/Documents/2 DAM/Interfaces/Meteorologia_España/lib/jackson-databind-2.9.9.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Juan Carlos/Documents/2 DAM/Interfaces/Meteorologia_España/lib/jackson-databind-2.9.9-javadoc.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Juan Carlos/Documents/2 DAM/Interfaces/Meteorologia_España/lib/jackson-databind-2.9.9-sources.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Juan Carlos/Documents/2 DAM/Interfaces/Meteorologia_España/lib/gson-2.8.2.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Antonio/git/Meteorologia_JC_AR/lib/gson-2.8.2.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Antonio/git/Meteorologia_JC_AR/lib/jackson-annotations-2.9.9.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Antonio/git/Meteorologia_JC_AR/lib/jackson-annotations-2.9.9-javadoc.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Antonio/git/Meteorologia_JC_AR/lib/jackson-annotations-2.9.9-sources.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Antonio/git/Meteorologia_JC_AR/lib/jackson-core-2.9.9.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Antonio/git/Meteorologia_JC_AR/lib/jackson-core-2.9.9-javadoc.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Antonio/git/Meteorologia_JC_AR/lib/jackson-core-2.9.9-sources.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Antonio/git/Meteorologia_JC_AR/lib/jackson-databind-2.9.9.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Antonio/git/Meteorologia_JC_AR/lib/jackson-databind-2.9.9-javadoc.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Antonio/git/Meteorologia_JC_AR/lib/jackson-databind-2.9.9-sources.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
