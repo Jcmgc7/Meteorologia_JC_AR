@@ -55,6 +55,7 @@ public class Vista extends JFrame {
 	public JLabel temperatura_Min;
 	public JComboBox listaDias;
 	public JComboBox listaComunidad;
+	public JButton inicio;
 
 	/**
 	 * Launch the application.
@@ -85,15 +86,15 @@ public class Vista extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
-		 cartago = new JButton("New button");
+		 cartago = new JButton("");
 		cartago.setBounds(354, 353, 36, 31);
 		contentPane.add(cartago);
 		
-		 cordoba = new JButton("New button");
+		 cordoba = new JButton("");
 		cordoba.setBounds(195, 348, 36, 31);
 		contentPane.add(cordoba);
 		
-		 ceuta = new JButton("New button");
+		 ceuta = new JButton("");
 		ceuta.setBounds(143, 481, 36, 31);
 		contentPane.add(ceuta);
 		
@@ -124,7 +125,7 @@ public class Vista extends JFrame {
 		
 		 nombre = new JLabel("Not Found");
 		nombre.setForeground(Color.LIGHT_GRAY);
-		nombre.setBounds(567, 596, 74, 26);
+		nombre.setBounds(567, 596, 147, 26);
 		contentPane.add(nombre);
 		
 		listaDias = new JComboBox();
@@ -141,124 +142,123 @@ public class Vista extends JFrame {
 		tiempo_E.setBounds(34, 596, 119, 26);
 		contentPane.add(tiempo_E);
 		
-		 santa_cruz = new JButton("New button");
+		 santa_cruz = new JButton("");
 		santa_cruz.setBounds(427, 455, 36, 31);
 		contentPane.add(santa_cruz);
 		
-		 palma = new JButton("New button");
+		 palma = new JButton("");
 		palma.setBounds(519, 260, 36, 31);
 		contentPane.add(palma);
 		
-		 merida = new JButton("New button");
+		 merida = new JButton("");
 		merida.setBounds(117, 304, 36, 31);
 		contentPane.add(merida);
 		
-		 palma_canaria = new JButton("New button");
+		 palma_canaria = new JButton("");
 		palma_canaria.setBounds(480, 486, 36, 31);
 		contentPane.add(palma_canaria);
 		
-		 alacant = new JButton("New button");
+		 alacant = new JButton("");
 		alacant.setBounds(411, 326, 36, 31);
 		contentPane.add(alacant);
 		
-		 caceres = new JButton("New button");
+		 caceres = new JButton("");
 		caceres.setBounds(132, 242, 36, 31);
 		contentPane.add(caceres);
 		
-		 melilla = new JButton("New button");
+		 melilla = new JButton("");
 		melilla.setBounds(292, 501, 36, 31);
 		contentPane.add(melilla);
 		
-		 madrid = new JButton("New button");
+		 madrid = new JButton("");
 		madrid.setBounds(248, 201, 36, 31);
 		contentPane.add(madrid);
 		
-		 huesca = new JButton("New button");
+		 huesca = new JButton("");
 		huesca.setBounds(411, 92, 36, 31);
 		contentPane.add(huesca);
 		
-		 salamanca = new JButton("New button");
+		 salamanca = new JButton("");
 		salamanca.setBounds(132, 169, 36, 31);
 		contentPane.add(salamanca);
 		
-		 burgos = new JButton("New button");
+		 burgos = new JButton("");
 		burgos.setBounds(248, 85, 36, 31);
 		contentPane.add(burgos);
 		
-		 gerona = new JButton("New button");
+		 gerona = new JButton("");
 		gerona.setBounds(540, 80, 36, 31);
 		contentPane.add(gerona);
 		
-		 valladolid = new JButton("New button");
+		 valladolid = new JButton("");
 		valladolid.setBounds(195, 128, 36, 31);
 		contentPane.add(valladolid);
 		
-		 leon = new JButton("New button");
+		 leon = new JButton("");
 		leon.setBounds(143, 64, 36, 31);
 		contentPane.add(leon);
 		
-		 logrono = new JButton("New button");
+		 logrono = new JButton("");
 		logrono.setBounds(292, 92, 36, 31);
 		contentPane.add(logrono);
 		
-		 pamplona = new JButton("New button");
+		 pamplona = new JButton("");
 		pamplona.setBounds(338, 56, 36, 31);
 		contentPane.add(pamplona);
 		
-		 cadiz = new JButton("New button");
+		 cadiz = new JButton("");
 		cadiz.setBounds(132, 440, 36, 31);
 		contentPane.add(cadiz);
 		
-		 oviedo = new JButton("New button");
+		 oviedo = new JButton("");
 		oviedo.setBounds(143, 23, 36, 31);
 		contentPane.add(oviedo);
 		
-		santiago = new JButton("New button");
+		santiago = new JButton("");
 		santiago.setBounds(21, 39, 36, 31);
 		contentPane.add(santiago);
 		
-		 valencia = new JButton("New button");
+		 valencia = new JButton("");
 		valencia.setBounds(391, 260, 36, 31);
 		contentPane.add(valencia);
 		
-		 santander = new JButton("New button");
+		 santander = new JButton("");
 		santander.setBounds(235, 23, 36, 31);
 		contentPane.add(santander);
 		
-		 zaragoza = new JButton("New button");
+		 zaragoza = new JButton("");
 		zaragoza.setBounds(365, 128, 36, 31);
 		contentPane.add(zaragoza);
 		
-		 pais_vasco = new JButton("New button");
+		 pais_vasco = new JButton("");
 		pais_vasco.setBounds(292, 39, 36, 31);
 		contentPane.add(pais_vasco);
 		
-		 sevilla = new JButton("New button");
+		 sevilla = new JButton("");
 		sevilla.setBounds(143, 382, 36, 31);
 		contentPane.add(sevilla);
 		
-		 ciudad_real = new JButton("New button");
+		 ciudad_real = new JButton("");
 		ciudad_real.setBounds(235, 294, 36, 31);
 		contentPane.add(ciudad_real);
 		
-		 albacete = new JButton("New button");
+		 albacete = new JButton("");
 		albacete.setBounds(324, 299, 36, 31);
 		contentPane.add(albacete);
 		
-		 tarragona = new JButton("New button");
+		 tarragona = new JButton("");
 		tarragona.setBounds(457, 148, 36, 31);
 		contentPane.add(tarragona);
 		
-		 toledo = new JButton("New button");
+		 toledo = new JButton("");
 		toledo.setBounds(235, 242, 36, 31);
 		contentPane.add(toledo);
 		
-		 barcelona = new JButton("New button");
-		barcelona.setIcon(new ImageIcon("src/img/sol.png"));
+		barcelona = new JButton("");
 		barcelona.setBounds(506, 112, 36, 31);
 		contentPane.add(barcelona);
 		
-		 listaComunidad = new JComboBox();
+		listaComunidad = new JComboBox();
 		listaComunidad.setBounds(722, 224, 116, 31);
 		contentPane.add(listaComunidad);
 		
@@ -266,5 +266,9 @@ public class Vista extends JFrame {
 		mapE.setIcon(new ImageIcon("src/img/mapeja.png"));
 		mapE.setBounds(1, 1, 592, 539);
 		contentPane.add(mapE);
+		
+		inicio = new JButton("Inicio");
+		inicio.setBounds(722, 128, 85, 21);
+		contentPane.add(inicio);
 	}
 }

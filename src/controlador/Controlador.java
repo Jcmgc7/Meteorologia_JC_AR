@@ -9,6 +9,7 @@ import java.util.Properties;
 import java.util.Scanner;
 import java.util.Set;
 
+import javax.swing.ImageIcon;
 import javax.swing.JComponent;
 
 import java.net.HttpURLConnection;
@@ -43,6 +44,7 @@ public class Controlador implements ActionListener{
     
 	static Scanner sc = new Scanner (System.in);
 	
+	static ArrayList<String> nombres = new ArrayList();
 	static ArrayList<modeloC> CiudadesTem = new ArrayList();
 	Vista vista = new Vista();
 	
@@ -82,7 +84,7 @@ public class Controlador implements ActionListener{
 		this.vista.cordoba.addActionListener(this);
 		this.vista.cadiz.addActionListener(this);
 		this.vista.sevilla.addActionListener(this);
-		
+		this.vista.inicio.addActionListener(this);
 		
     }
     
@@ -147,7 +149,7 @@ public class Controlador implements ActionListener{
 	    	ciudad.add(new City("ciudad_real")); ciudad.add(new City("san_sebastian")); ciudad.add(new City("madrid")); 
 	    	ciudad.add(new City("toledo")); ciudad.add(new City("vitoria")); ciudad.add(new City("caceres")); 
 	    	ciudad.add(new City("albacete")); ciudad.add(new City("pamplona")); ciudad.add(new City("merida"));
-	    	ciudad.add(new City("sevilla")); ciudad.add(new City("logrono")); ciudad.add(new City("valencia")); 
+	    	ciudad.add(new City("sevilla")); ciudad.add(new City("logrono")); 
 	    	ciudad.add(new City("valencia")); ciudad.add(new City("barcelona")); ciudad.add(new City("alicante")); 
 	    	ciudad.add(new City("cadiz")); ciudad.add(new City("gerona")); ciudad.add(new City("palma")); 
 	    	ciudad.add(new City("cordoba")); ciudad.add(new City("tarragona")); ciudad.add(new City("santa_cruz_tenerife")); 
@@ -157,10 +159,46 @@ public class Controlador implements ActionListener{
 			
 			
 		}
+	    public static String temperature(ArrayList<modeloC> CiudadesTem, int ciudad) {
+	    	String icono = null;
+	    	if (CiudadesTem.get(ciudad).getTiempo().equals("Soleado")) {
+	    		icono = "src/img/dom.png";
+	    	}
+	    	if (CiudadesTem.get(ciudad).getTiempo().equals("Parcialmente nuboso")) {
+	    		icono = "src/img/soleado.png";
+	    	}
+	    	if (CiudadesTem.get(ciudad).getTiempo().equals("Nuboso")) {
+	    		icono = "src/img/dia_nublado.png";
+	    	}
+	    	if (CiudadesTem.get(ciudad).getTiempo().equals("Lluvia")) {
+	    		icono = "src/img/lluvioso.png";
+	    	}
+	    	if (CiudadesTem.get(ciudad).getTiempo().equals("Niebla")) {
+	    		icono = "src/img/dom.png";
+	    	}
+	    	if (CiudadesTem.get(ciudad).getTiempo().equals("Nieve")) {
+	    		icono = "src/img/nieve.png";
+	    	}
+	    	if (CiudadesTem.get(ciudad).getTiempo().equals("Ventoso")) {
+	    		icono = "src/img/viento.png";
+	    	}
+	    	if (CiudadesTem.get(ciudad).getTiempo().equals("Chuvascos")) {
+	    		icono = "src/img/chuvascos.png";
+	    	}
+	    	if (CiudadesTem.get(ciudad).getTiempo().equals("Tormentas")) {
+	    		icono = "src/img/tormenta.png";
+	    	}
+	    	if (CiudadesTem.get(ciudad).getTiempo().equals("Granizo")) {
+	    		icono = "src/img/granizo.png";
+	    	}
+	    	if (CiudadesTem.get(ciudad).getTiempo().equals("Muy nuboso") || CiudadesTem.get(ciudad).getTiempo().equals("Cubierto")) {
+	    		icono = "src/img/nubes.png";
+	    	}
+	    	return icono;
+	    }
 	    static void agregarCiudad(String nombre, String temp, String max, String min) {
 	        CiudadesTem.add(new modeloC(nombre,temp,max,min));
 	    }
-	    
 	    @Override
 		public void actionPerformed(ActionEvent e) {
 			
@@ -186,7 +224,141 @@ public class Controlador implements ActionListener{
 		        }
         	recuperarInfo(Nom_ciudad);   
         	
-	    	
+        	if(e.getSource() == this.vista.inicio) {
+        		
+        		for (int i=0;i<CiudadesTem.size();i++) {
+        			if (CiudadesTem.get(i).getNombre().equals("barcelona")) {
+        				String icono = temperature(CiudadesTem, i);
+        				vista.barcelona.setIcon(new ImageIcon(icono));
+    			}
+        			if (CiudadesTem.get(i).getNombre().equals("tarragona")) {
+        				String icono = temperature(CiudadesTem, i);
+        				vista.tarragona.setIcon(new ImageIcon(icono));
+    			}
+        			if (CiudadesTem.get(i).getNombre().equals("gerona")) {
+        				String icono = temperature(CiudadesTem, i);
+        				vista.gerona.setIcon(new ImageIcon(icono));
+    			}
+        			if (CiudadesTem.get(i).getNombre().equals("santiago")) {
+        				String icono = temperature(CiudadesTem, i);
+        				vista.santiago.setIcon(new ImageIcon(icono));
+    			}
+        			if (CiudadesTem.get(i).getNombre().equals("oviedo")) {
+        				String icono = temperature(CiudadesTem, i);
+        				vista.oviedo.setIcon(new ImageIcon(icono));
+    			}
+        			if (CiudadesTem.get(i).getNombre().equals("santander")) {
+        				String icono = temperature(CiudadesTem, i);
+        				vista.santander.setIcon(new ImageIcon(icono));
+    			}
+        			if (CiudadesTem.get(i).getNombre().equals("san_sebastian")) {
+        				String icono = temperature(CiudadesTem, i);
+        				vista.pais_vasco.setIcon(new ImageIcon(icono));
+    			}
+        			if (CiudadesTem.get(i).getNombre().equals("pamplona")) {
+        				String icono = temperature(CiudadesTem, i);
+        				vista.pamplona.setIcon(new ImageIcon(icono));
+    			}
+        			if (CiudadesTem.get(i).getNombre().equals("logrono")) {
+        				String icono = temperature(CiudadesTem, i);
+        				vista.logrono.setIcon(new ImageIcon(icono));
+    			}
+        			if (CiudadesTem.get(i).getNombre().equals("huesca")) {
+        				String icono = temperature(CiudadesTem, i);
+        				vista.huesca.setIcon(new ImageIcon(icono));
+    			}
+        			if (CiudadesTem.get(i).getNombre().equals("zaragoza")) {
+        				String icono = temperature(CiudadesTem, i);
+        				vista.zaragoza.setIcon(new ImageIcon(icono));
+    			}
+        			if (CiudadesTem.get(i).getNombre().equals("valladolid")) {
+        				String icono = temperature(CiudadesTem, i);
+        				vista.valladolid.setIcon(new ImageIcon(icono));
+    			}
+        			if (CiudadesTem.get(i).getNombre().equals("leon")) {
+        				String icono = temperature(CiudadesTem, i);
+        				vista.leon.setIcon(new ImageIcon(icono));
+    			}
+        			if (CiudadesTem.get(i).getNombre().equals("burgos")) {
+        				String icono = temperature(CiudadesTem, i);
+        				vista.burgos.setIcon(new ImageIcon(icono));
+    			}
+        			if (CiudadesTem.get(i).getNombre().equals("salamanca")) {
+        				String icono = temperature(CiudadesTem, i);
+        				vista.salamanca.setIcon(new ImageIcon(icono));
+    			}
+        			if (CiudadesTem.get(i).getNombre().equals("madrid")) {
+        				String icono = temperature(CiudadesTem, i);
+        				vista.madrid.setIcon(new ImageIcon(icono));
+    			}
+        			if (CiudadesTem.get(i).getNombre().equals("toledo")) {
+        				String icono = temperature(CiudadesTem, i);
+        				vista.toledo.setIcon(new ImageIcon(icono));
+    			}
+        			if (CiudadesTem.get(i).getNombre().equals("ciudad_real")) {
+        				String icono = temperature(CiudadesTem, i);
+        				vista.ciudad_real.setIcon(new ImageIcon(icono));
+    			}
+        			if (CiudadesTem.get(i).getNombre().equals("albacete")) {
+        				String icono = temperature(CiudadesTem, i);
+        				vista.albacete.setIcon(new ImageIcon(icono));
+    			}
+        			if (CiudadesTem.get(i).getNombre().equals("cartagena")) {
+        				String icono = temperature(CiudadesTem, i);
+        				vista.cartago.setIcon(new ImageIcon(icono));
+    			}
+        			if (CiudadesTem.get(i).getNombre().equals("valencia")) {
+        				String icono = temperature(CiudadesTem, i);
+        				vista.valencia.setIcon(new ImageIcon(icono));
+    			}
+        			if (CiudadesTem.get(i).getNombre().equals("alicante")) {
+        				String icono = temperature(CiudadesTem, i);
+        				vista.alacant.setIcon(new ImageIcon(icono));
+    			}
+        			if (CiudadesTem.get(i).getNombre().equals("merida")) {
+        				String icono = temperature(CiudadesTem, i);
+        				vista.merida.setIcon(new ImageIcon(icono));
+    			}
+        			if (CiudadesTem.get(i).getNombre().equals("caceres")) {
+        				String icono = temperature(CiudadesTem, i);
+        				vista.caceres.setIcon(new ImageIcon(icono));
+    			}
+        			if (CiudadesTem.get(i).getNombre().equals("cordoba")) {
+        				String icono = temperature(CiudadesTem, i);
+        				vista.cordoba.setIcon(new ImageIcon(icono));
+    			}
+        			if (CiudadesTem.get(i).getNombre().equals("sevilla")) {
+        				String icono = temperature(CiudadesTem, i);
+        				vista.sevilla.setIcon(new ImageIcon(icono));
+    			}
+        			if (CiudadesTem.get(i).getNombre().equals("cadiz")) {
+        				String icono = temperature(CiudadesTem, i);
+        				vista.cadiz.setIcon(new ImageIcon(icono));
+    			}
+        			
+        			if (CiudadesTem.get(i).getNombre().equals("palma")) {
+        				String icono = temperature(CiudadesTem, i);
+        				vista.palma.setIcon(new ImageIcon(icono));
+    			}
+        			if (CiudadesTem.get(i).getNombre().equals("santa_cruz_tenerife")) {
+        				String icono = temperature(CiudadesTem, i);
+        				vista.santa_cruz.setIcon(new ImageIcon(icono));
+    			}
+        			if (CiudadesTem.get(i).getNombre().equals("santa_cruz_palma")) {
+        				String icono = temperature(CiudadesTem, i);
+        				vista.palma_canaria.setIcon(new ImageIcon(icono));
+    			}
+        			if (CiudadesTem.get(i).getNombre().equals("ceuta")) {
+        				String icono = temperature(CiudadesTem, i);
+        				vista.ceuta.setIcon(new ImageIcon(icono));
+    			}
+        			if (CiudadesTem.get(i).getNombre().equals("melilla")) {
+        				String icono = temperature(CiudadesTem, i);
+        				vista.melilla.setIcon(new ImageIcon(icono));
+    			}
+        		}
+        	}
+        	
 			if(e.getSource() == this.vista.santiago) {
 				
 				vista.tiempo_E.setText(CiudadesTem.get(0).getTiempo());
