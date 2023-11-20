@@ -256,6 +256,7 @@ public class Vista extends JFrame {
 		 albacete = new JButton("");
 		albacete.setBounds(324, 299, 36, 31);
 		contentPane.add(albacete);
+	
 		
 		 tarragona = new JButton("");
 		tarragona.setBounds(457, 148, 36, 31);
@@ -283,5 +284,110 @@ public class Vista extends JFrame {
 		contentPane.add(inicio);
 	
 	}	
+	public void setIconoEnCiudad(String ciudad, ImageIcon icono) {
+	    switch (ciudad) {
+	        case "barcelona":
+	            barcelona.setIcon(icono);
+	            break;
+	        case "tarragona":
+	            tarragona.setIcon(icono);
+	            break;
+	        case "gerona":
+	            gerona.setIcon(icono);
+	            break;
+	        case "santiago":
+	            santiago.setIcon(icono);
+	            break;
+	        case "oviedo":
+	            oviedo.setIcon(icono);
+	            break;
+	        case "santander":
+	            santander.setIcon(icono);
+	            break;
+	        case "san_sebastian":
+	            pais_vasco.setIcon(icono);
+	            break;
+	        case "pamplona":
+	            pamplona.setIcon(icono);
+	            break;
+	        case "logrono":
+	            logrono.setIcon(icono);
+	            break;
+	        case "huesca":
+	            huesca.setIcon(icono);
+	            break;
+	        case "zaragoza":
+	            zaragoza.setIcon(icono);
+	            break;
+	        case "valladolid":
+	            valladolid.setIcon(icono);
+	            break;
+	        case "leon":
+	            leon.setIcon(icono);
+	            break;
+	        case "burgos":
+	            burgos.setIcon(icono);
+	            break;
+	        case "salamanca":
+	            salamanca.setIcon(icono);
+	            break;
+	        case "madrid":
+	            madrid.setIcon(icono);
+	            break;
+	        case "toledo":
+	            toledo.setIcon(icono);
+	            break;
+	        case "ciudad_real":
+	            ciudad_real.setIcon(icono);
+	            break;
+	        case "albacete":
+	            albacete.setIcon(icono);
+	            break;
+	        case "cartagena":
+	            cartago.setIcon(icono);
+	            break;
+	        case "valencia":
+	            valencia.setIcon(icono);
+	            break;
+	        case "alicante":
+	            alacant.setIcon(icono);
+	            break;
+	        case "merida":
+	            merida.setIcon(icono);
+	            break;
+	        case "caceres":
+	            caceres.setIcon(icono);
+	            break;
+	        case "cordoba":
+	            cordoba.setIcon(icono);
+	            break;
+	        case "sevilla":
+	            sevilla.setIcon(icono);
+	            break;
+	        case "cadiz":
+	            cadiz.setIcon(icono);
+	            break;
+	        case "palma":
+	            palma.setIcon(icono);
+	            break;
+	        case "santa_cruz_tenerife":
+	            santa_cruz.setIcon(icono);
+	            break;
+	        case "santa_cruz_palma":
+	            palma_canaria.setIcon(icono);
+	            break;
+	        case "ceuta":
+	            ceuta.setIcon(icono);
+	            break;
+	        case "melilla":
+	            melilla.setIcon(icono);
+	            break;
+	        default:
+	            System.err.println("Ciudad no reconocida: " + ciudad);
+	    }
+	}
+
+	
+	
 }
 
