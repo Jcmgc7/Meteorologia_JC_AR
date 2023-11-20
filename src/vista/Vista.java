@@ -12,7 +12,9 @@ import javax.swing.JButton;
 import javax.swing.JComboBox;
 import javax.swing.JSpinner;
 import java.awt.Font;
+import java.time.LocalDate;
 import java.awt.Color;
+import javax.swing.DefaultComboBoxModel;
 
 public class Vista extends JFrame {
 	
@@ -49,6 +51,7 @@ public class Vista extends JFrame {
 	public JButton palma;
 	public JButton ceuta;
 	public JButton melilla;
+	public JButton day; 
 	public JLabel nombre;
 	public JLabel tiempo_E;
 	public JLabel temperatura_Max;
@@ -81,20 +84,22 @@ public class Vista extends JFrame {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 913, 745);
 		contentPane = new JPanel();
+		contentPane.setBackground(Color.WHITE);
+		contentPane.setForeground(Color.BLACK);
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
-		 cartago = new JButton("");
+		cartago = new JButton("");
 		cartago.setBounds(354, 353, 36, 31);
 		contentPane.add(cartago);
 		
-		 cordoba = new JButton("");
+		cordoba = new JButton("");
 		cordoba.setBounds(195, 348, 36, 31);
 		contentPane.add(cordoba);
 		
-		 ceuta = new JButton("");
+		ceuta = new JButton("");
 		ceuta.setBounds(143, 481, 36, 31);
 		contentPane.add(ceuta);
 		
@@ -128,9 +133,7 @@ public class Vista extends JFrame {
 		nombre.setBounds(567, 596, 147, 26);
 		contentPane.add(nombre);
 		
-		listaDias = new JComboBox();
-		listaDias.setBounds(722, 348, 116, 31);
-		contentPane.add(listaDias);
+		
 		
 		JLabel Etiqueta_Tiempo = new JLabel("Tiempo :");
 		Etiqueta_Tiempo.setFont(new Font("Tahoma", Font.BOLD, 12));
@@ -139,7 +142,7 @@ public class Vista extends JFrame {
 		
 		 tiempo_E = new JLabel("Not Found");
 		tiempo_E.setForeground(Color.LIGHT_GRAY);
-		tiempo_E.setBounds(34, 596, 119, 26);
+		tiempo_E.setBounds(34, 596, 145, 26);
 		contentPane.add(tiempo_E);
 		
 		 santa_cruz = new JButton("");
@@ -270,5 +273,22 @@ public class Vista extends JFrame {
 		inicio = new JButton("Inicio");
 		inicio.setBounds(722, 128, 85, 21);
 		contentPane.add(inicio);
+		
+		listaDias = new JComboBox();
+		LocalDate fecha = LocalDate.now();
+		listaDias.setModel(new DefaultComboBoxModel(new LocalDate[] {fecha, diaSemana(fecha,1), diaSemana(fecha,2), diaSemana(fecha,3), diaSemana(fecha,4)}));
+		listaDias.setBounds(722, 326, 116, 31);
+		contentPane.add(listaDias);
+		
+		day = new JButton("Confirmar dia");
+		day.setBounds(722, 392, 116, 21);
+		contentPane.add(day);
+		
+		JButton btnNewButton_1 = new JButton("New button");
+		btnNewButton_1.setBounds(737, 277, 85, 21);
+		contentPane.add(btnNewButton_1);
 	}
+	public static LocalDate diaSemana(LocalDate fecha, int dias) {
+        return fecha.plusDays(dias);
+    }
 }

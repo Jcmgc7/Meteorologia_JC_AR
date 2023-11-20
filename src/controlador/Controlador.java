@@ -9,11 +9,13 @@ import java.util.Properties;
 import java.util.Scanner;
 import java.util.Set;
 
+import javax.swing.DefaultComboBoxModel;
 import javax.swing.ImageIcon;
 import javax.swing.JComponent;
 
 import java.net.HttpURLConnection;
 import java.net.URL;
+import java.time.LocalDate;
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.awt.event.ActionEvent;
@@ -99,25 +101,25 @@ public class Controlador implements ActionListener{
 		
 		return nom;
 	}
-	    public static void recuperarInfo(ArrayList<City> Nom_ciudad) {
+	    public static void recuperarInfo(ArrayList<City> Nom_ciudad, int dia) {
 	    	try {
             	for(int i = 0; i<Nom_ciudad.size();i++){
             		String ciuTem = fetchDataFromURL(Nom_ciudad.get(i).getUrl());
-                	movimientoInfo(ciuTem, Nom_ciudad.get(i).getNombre());
+                	movimientoInfo(ciuTem, Nom_ciudad.get(i).getNombre(),dia);
     					
                 	}
     			} catch (Exception e) {
     				e.printStackTrace();
     			}
 	    }
-	    public static void  movimientoInfo(String info, String nombre){
+	    public static void  movimientoInfo(String info, String nombre, int dia){
 	    	
 	    	Gson city = new Gson();
             JsonObject objeto = city.fromJson(info, JsonObject.class);
 
-            String tiempo = objeto.getAsJsonObject("city").getAsJsonObject("forecast").getAsJsonArray("forecastDay").get(0).getAsJsonObject().get("weather").getAsString();
-            String max = objeto.getAsJsonObject("city").getAsJsonObject("forecast").getAsJsonArray("forecastDay").get(0).getAsJsonObject().get("maxTemp").getAsString();
-            String min = objeto.getAsJsonObject("city").getAsJsonObject("forecast").getAsJsonArray("forecastDay").get(0).getAsJsonObject().get("minTemp").getAsString();
+            String tiempo = objeto.getAsJsonObject("city").getAsJsonObject("forecast").getAsJsonArray("forecastDay").get(dia).getAsJsonObject().get("weather").getAsString();
+            String max = objeto.getAsJsonObject("city").getAsJsonObject("forecast").getAsJsonArray("forecastDay").get(dia).getAsJsonObject().get("maxTemp").getAsString();
+            String min = objeto.getAsJsonObject("city").getAsJsonObject("forecast").getAsJsonArray("forecastDay").get(dia).getAsJsonObject().get("minTemp").getAsString();
             
             agregarCiudad(nombre,tiempo,max,min);
             
@@ -170,7 +172,7 @@ public class Controlador implements ActionListener{
 	    	if (CiudadesTem.get(ciudad).getTiempo().equals("Nuboso")) {
 	    		icono = "src/img/dia_nublado.png";
 	    	}
-	    	if (CiudadesTem.get(ciudad).getTiempo().equals("Lluvia")) {
+	    	if (CiudadesTem.get(ciudad).getTiempo().equals("Lluvia")|| CiudadesTem.get(ciudad).getTiempo().equals("Lluvia débil")) {
 	    		icono = "src/img/lluvioso.png";
 	    	}
 	    	if (CiudadesTem.get(ciudad).getTiempo().equals("Niebla")) {
@@ -182,8 +184,8 @@ public class Controlador implements ActionListener{
 	    	if (CiudadesTem.get(ciudad).getTiempo().equals("Ventoso")) {
 	    		icono = "src/img/viento.png";
 	    	}
-	    	if (CiudadesTem.get(ciudad).getTiempo().equals("Chuvascos")) {
-	    		icono = "src/img/chuvascos.png";
+	    	if (CiudadesTem.get(ciudad).getTiempo().equals("Chubascos") || CiudadesTem.get(ciudad).getTiempo().equals("Chubascos dispersos")) {
+	    		icono = "src/img/chuvasco.png";
 	    	}
 	    	if (CiudadesTem.get(ciudad).getTiempo().equals("Tormentas")) {
 	    		icono = "src/img/tormenta.png";
@@ -199,6 +201,8 @@ public class Controlador implements ActionListener{
 	    static void agregarCiudad(String nombre, String temp, String max, String min) {
 	        CiudadesTem.add(new modeloC(nombre,temp,max,min));
 	    }
+	    
+	    
 	    @Override
 		public void actionPerformed(ActionEvent e) {
 			
@@ -222,9 +226,31 @@ public class Controlador implements ActionListener{
         	 catch (IOException i) {
 		            i.printStackTrace();
 		        }
-        	recuperarInfo(Nom_ciudad);   
+        	   
+        	
         	
         	if(e.getSource() == this.vista.inicio) {
+        		
+        		LocalDate fecha = LocalDate.now();
+        		int dia = 0;
+        		CiudadesTem.clear();
+   	    		if (vista.listaDias.getSelectedItem().toString().equals(fecha.toString())) {
+   	    			dia = 0;
+   	    		}
+   	    		if (vista.listaDias.getSelectedItem().toString().equals(fecha.plusDays(1).toString())) {
+   	    			dia = 1;
+   	    		}
+   	    		if (vista.listaDias.getSelectedItem().toString().equals(fecha.plusDays(2).toString())) {
+   	    			dia = 2;
+   	    		}
+   	    		if (vista.listaDias.getSelectedItem().toString().equals(fecha.plusDays(3).toString())) {
+   	    			dia = 3;
+   	    		}
+   	    		if (vista.listaDias.getSelectedItem().toString().equals(fecha.plusDays(4).toString())) {
+   	    			dia = 4;
+   	    		}
+   	    		recuperarInfo(Nom_ciudad, dia); 
+        		
         		
         		for (int i=0;i<CiudadesTem.size();i++) {
         			if (CiudadesTem.get(i).getNombre().equals("barcelona")) {
@@ -842,23 +868,8 @@ public class Controlador implements ActionListener{
 				}
 			}
 			
+			 
+			}	
 			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-		}
 	}
 	
