@@ -16,6 +16,7 @@ import java.awt.Color;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import javax.swing.JTextField;
 
 
 public class Vista extends JFrame {
@@ -64,6 +65,7 @@ public class Vista extends JFrame {
 	public JComboBox listaDias;
 	public JComboBox listaComunidad;
 	public JButton inicio;
+	private JTextField txtMeteorologicalGroundhog;
 
 	/**
 	 * Launch the application.
@@ -282,6 +284,18 @@ public class Vista extends JFrame {
 		inicio = new JButton("Inicio");
 		inicio.setBounds(722, 128, 85, 21);
 		contentPane.add(inicio);
+		
+		JLabel lblNewLabel = new JLabel("New label");
+		lblNewLabel.setIcon(new ImageIcon(Vista.class.getResource("/img/marmoteision.jpg")));
+		lblNewLabel.setBounds(689, 501, 200, 185);
+		contentPane.add(lblNewLabel);
+		
+		txtMeteorologicalGroundhog = new JTextField();
+		txtMeteorologicalGroundhog.setFont(new Font("Snap ITC", Font.BOLD, 13));
+		txtMeteorologicalGroundhog.setText("Meteorological Groundhog");
+		txtMeteorologicalGroundhog.setBounds(689, 467, 200, 36);
+		contentPane.add(txtMeteorologicalGroundhog);
+		txtMeteorologicalGroundhog.setColumns(10);
 	
 	}	
 	public void setIconoEnCiudad(String ciudad, ImageIcon icono) {
@@ -386,8 +400,5 @@ public class Vista extends JFrame {
 	            System.err.println("Ciudad no reconocida: " + ciudad);
 	    }
 	}
-
-	
-	
 }
 

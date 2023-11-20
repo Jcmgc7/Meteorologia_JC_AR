@@ -170,7 +170,7 @@ public class Controlador implements ActionListener{
 	    	if (CiudadesTem.get(ciudad).getTiempo().equals("Nuboso")) {
 	    		icono = "src/img/dia_nublado.png";
 	    	}
-	    	if (CiudadesTem.get(ciudad).getTiempo().equals("Lluvia")) {
+	    	if (CiudadesTem.get(ciudad).getTiempo().equals("Lluvia") || CiudadesTem.get(ciudad).getTiempo().equals("Lluvia débil")) {
 	    		icono = "src/img/lluvioso.png";
 	    	}
 	    	if (CiudadesTem.get(ciudad).getTiempo().equals("Niebla")) {
@@ -194,6 +194,8 @@ public class Controlador implements ActionListener{
 	    	if (CiudadesTem.get(ciudad).getTiempo().equals("Muy nuboso") || CiudadesTem.get(ciudad).getTiempo().equals("Cubierto")) {
 	    		icono = "src/img/nubes.png";
 	    	}
+	    	
+	    	
 	    
 	    	return icono;
 	    }
