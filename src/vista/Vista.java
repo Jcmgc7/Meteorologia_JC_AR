@@ -13,15 +13,14 @@ import javax.swing.JComboBox;
 import javax.swing.JSpinner;
 import java.awt.Font;
 import java.awt.Color;
-import javax.swing.JComboBox;
+
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 
 public class Vista extends JFrame {
 	 
-	private Controlador controlador;
-	private JComboBox<String> ciudades;
+
 	
 	
 	
@@ -283,15 +282,6 @@ public class Vista extends JFrame {
 		inicio.setBounds(722, 128, 85, 21);
 		contentPane.add(inicio);
 	
-	ciudades.addActionListener(new ActionListener() {
-
-		@Override
-		public void actionPerformed(ActionEvent e) {
-			 String ciudadSeleccionada = (String) ciudades.getSelectedItem();
-			 
-		}
-		
-	});
-
-	}
+	}	
 }
+
