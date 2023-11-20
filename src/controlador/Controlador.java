@@ -194,6 +194,7 @@ public class Controlador implements ActionListener{
 	    	if (CiudadesTem.get(ciudad).getTiempo().equals("Muy nuboso") || CiudadesTem.get(ciudad).getTiempo().equals("Cubierto")) {
 	    		icono = "src/img/nubes.png";
 	    	}
+	    
 	    	return icono;
 	    }
 	    static void agregarCiudad(String nombre, String temp, String max, String min) {

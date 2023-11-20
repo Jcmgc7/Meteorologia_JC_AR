@@ -13,8 +13,17 @@ import javax.swing.JComboBox;
 import javax.swing.JSpinner;
 import java.awt.Font;
 import java.awt.Color;
+import javax.swing.JComboBox;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
 
 public class Vista extends JFrame {
+	 
+	private Controlador controlador;
+	private JComboBox<String> ciudades;
+	
+	
 	
 	public JPanel contentPane;
 	public JButton santiago;
@@ -78,6 +87,9 @@ public class Vista extends JFrame {
 	 * Create the frame.
 	 */
 	public Vista() {
+		
+		
+		
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 913, 745);
 		contentPane = new JPanel();
@@ -270,5 +282,16 @@ public class Vista extends JFrame {
 		inicio = new JButton("Inicio");
 		inicio.setBounds(722, 128, 85, 21);
 		contentPane.add(inicio);
+	
+	ciudades.addActionListener(new ActionListener() {
+
+		@Override
+		public void actionPerformed(ActionEvent e) {
+			 String ciudadSeleccionada = (String) ciudades.getSelectedItem();
+			 
+		}
+		
+	});
+
 	}
 }
