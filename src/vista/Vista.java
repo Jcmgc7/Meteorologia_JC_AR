@@ -416,7 +416,7 @@ public class Vista extends JFrame {
 		barcelona.setFocusPainted(false);
 		
 		listaComunidad = new JComboBox();
-		listaComunidad.setBounds(722, 224, 116, 31);
+		listaComunidad.setBounds(722, 294, 116, 31);
 		contentPane.add(listaComunidad);
 		
 		JLabel mapE = new JLabel("");
@@ -425,14 +425,23 @@ public class Vista extends JFrame {
 		contentPane.add(mapE);
 		
 		inicio = new JButton("Inicio");
-		inicio.setBounds(722, 128, 85, 21);
+		inicio.setIcon(new ImageIcon(Vista.class.getResource("/img/marmoteision.jpg")));
+		inicio.setBounds(680, 23, 193, 200);
 		contentPane.add(inicio);
 		
 		listaDias = new JComboBox();
 		LocalDate fecha = LocalDate.now();
 		listaDias.setModel(new DefaultComboBoxModel(new LocalDate[] {fecha, diaSemana(fecha,1), diaSemana(fecha,2), diaSemana(fecha,3), diaSemana(fecha,4)}));
-		listaDias.setBounds(722, 326, 116, 31);
+		listaDias.setBounds(722, 382, 116, 31);
 		contentPane.add(listaDias);
+		
+		JLabel lblNewLabel = new JLabel("Comunidad:");
+		lblNewLabel.setBounds(744, 278, 67, 13);
+		contentPane.add(lblNewLabel);
+		
+		JLabel lblNewLabel_1 = new JLabel("Fecha:");
+		lblNewLabel_1.setBounds(744, 364, 45, 13);
+		contentPane.add(lblNewLabel_1);
 	}
 	public static LocalDate diaSemana(LocalDate fecha, int dias) {
         return fecha.plusDays(dias);
