@@ -817,7 +817,7 @@ public class Controlador implements ActionListener{
 						vista.temperatura_Min.setForeground(new Color(30, 144, 255));
 						vista.nombre.setText(CiudadesTem.get(i).getNombre());
 						vista.nombre.setForeground(Color.BLACK);
-						vista.reproducirSonido2("src/sound/marmota.aiff");
+						vista.reproducirSonido2("src/sound/hasbu.aiff");
 						vista.Hasbulla.setVisible(true);
 						vista.escalera.setVisible(false);
 						vista.Hasbulla.setBounds(400, 298, 136, 136);
@@ -837,7 +837,7 @@ public class Controlador implements ActionListener{
 						vista.temperatura_Min.setForeground(new Color(30, 144, 255));
 						vista.nombre.setText(CiudadesTem.get(i).getNombre());
 						vista.nombre.setForeground(Color.BLACK);
-						vista.reproducirSonido2("src/sound/marmota.aiff");
+						vista.reproducirSonido2("src/sound/hasbu.aiff");
 						vista.Hasbulla.setVisible(true);
 						vista.escalera.setVisible(false);
 						vista.Hasbulla.setBounds(114, 201, 136, 136);
@@ -857,7 +857,7 @@ public class Controlador implements ActionListener{
 						vista.temperatura_Min.setForeground(new Color(30, 144, 255));
 						vista.nombre.setText(CiudadesTem.get(i).getNombre());
 						vista.nombre.setForeground(Color.BLACK);
-						vista.reproducirSonido2("src/sound/marmota.aiff");
+						vista.reproducirSonido2("src/sound/hasbu.aiff");
 						vista.Hasbulla.setVisible(true);
 						vista.escalera.setVisible(false);
 						vista.Hasbulla.setBounds(91, 260, 136, 136);
@@ -877,7 +877,7 @@ public class Controlador implements ActionListener{
 						vista.temperatura_Min.setForeground(new Color(30, 144, 255));
 						vista.nombre.setText(CiudadesTem.get(i).getNombre());
 						vista.nombre.setForeground(Color.BLACK);
-						vista.reproducirSonido2("src/sound/marmota.aiff");
+						vista.reproducirSonido2("src/sound/hasbu.aiff");
 						vista.Hasbulla.setVisible(true);
 						vista.escalera.setVisible(false);
 						vista.Hasbulla.setBounds(117, 350, 136, 136);
@@ -897,7 +897,7 @@ public class Controlador implements ActionListener{
 						vista.temperatura_Min.setForeground(new Color(30, 144, 255));
 						vista.nombre.setText(CiudadesTem.get(i).getNombre());
 						vista.nombre.setForeground(Color.BLACK);
-						vista.reproducirSonido2("src/sound/marmota.aiff");
+						vista.reproducirSonido2("src/sound/hasbu.aiff");
 						vista.Hasbulla.setVisible(true);
 						vista.escalera.setVisible(false);
 						vista.Hasbulla.setBounds(117, 408, 136, 136);
@@ -917,7 +917,7 @@ public class Controlador implements ActionListener{
 						vista.temperatura_Min.setForeground(new Color(30, 144, 255));
 						vista.nombre.setText(CiudadesTem.get(i).getNombre());
 						vista.nombre.setForeground(Color.BLACK);
-						vista.reproducirSonido2("src/sound/marmota.aiff");
+						vista.reproducirSonido2("src/sound/hasbu.aiff");
 						vista.Hasbulla.setVisible(true);
 						vista.escalera.setVisible(false);
 						vista.Hasbulla.setBounds(163, 318, 136, 136);
@@ -937,7 +937,7 @@ public class Controlador implements ActionListener{
 						vista.temperatura_Min.setForeground(new Color(30, 144, 255));
 						vista.nombre.setText(CiudadesTem.get(i).getNombre());
 						vista.nombre.setForeground(Color.BLACK);
-						vista.reproducirSonido2("src/sound/marmota.aiff");
+						vista.reproducirSonido2("src/sound/hasbu.aiff");
 						vista.Hasbulla.setVisible(true);
 						vista.escalera.setVisible(false);
 						vista.Hasbulla.setBounds(334, 318, 136, 136);
@@ -957,7 +957,7 @@ public class Controlador implements ActionListener{
 						vista.temperatura_Min.setForeground(new Color(30, 144, 255));
 						vista.nombre.setText(CiudadesTem.get(i).getNombre());
 						vista.nombre.setForeground(Color.BLACK);
-						vista.reproducirSonido2("src/sound/marmota.aiff");
+						vista.reproducirSonido2("src/sound/hasbu.aiff");
 						vista.Hasbulla.setVisible(true);
 						vista.escalera.setVisible(false);
 						vista.Hasbulla.setBounds(490, 221, 136, 136);
@@ -977,7 +977,7 @@ public class Controlador implements ActionListener{
 						vista.temperatura_Min.setForeground(new Color(30, 144, 255));
 						vista.nombre.setText(CiudadesTem.get(i).getNombre());
 						vista.nombre.setForeground(Color.BLACK);
-						vista.reproducirSonido2("src/sound/marmota.aiff");
+						vista.reproducirSonido2("src/sound/hasbu.aiff");
 						vista.Hasbulla.setVisible(true);
 						vista.escalera.setVisible(false);
 						vista.Hasbulla.setBounds(411, 429, 136, 136);
@@ -997,7 +997,7 @@ public class Controlador implements ActionListener{
 						vista.temperatura_Min.setForeground(new Color(30, 144, 255));
 						vista.nombre.setText(CiudadesTem.get(i).getNombre());
 						vista.nombre.setForeground(Color.BLACK);
-						vista.reproducirSonido2("src/sound/marmota.aiff");
+						vista.reproducirSonido2("src/sound/hasbu.aiff");
 						vista.Hasbulla.setVisible(true);
 						vista.escalera.setVisible(false);
 						vista.Hasbulla.setBounds(467, 440, 136, 136);
@@ -1012,12 +1012,12 @@ public class Controlador implements ActionListener{
 						vista.tiempo_E.setText(CiudadesTem.get(i).getTiempo());
 						vista.tiempo_E.setForeground(Color.BLACK);
 						vista.temperatura_Max.setText(CiudadesTem.get(i).getTemMax());
-						vista.temperatura_Max.setForeground(Color.BLACK);
+						vista.temperatura_Max.setForeground(new Color(255, 0, 0));
 						vista.temperatura_Min.setText(CiudadesTem.get(i).getTemMin());
 						vista.temperatura_Min.setForeground(new Color(30, 144, 255));
 						vista.nombre.setText(CiudadesTem.get(i).getNombre());
 						vista.nombre.setForeground(Color.BLACK);
-						vista.reproducirSonido2("src/sound/marmota.aiff");
+						vista.reproducirSonido2("src/sound/hasbu.aiff");
 						vista.Hasbulla.setVisible(true);
 						vista.escalera.setVisible(false);
 						vista.Hasbulla.setBounds(135, 439, 136, 136);
@@ -1037,7 +1037,7 @@ public class Controlador implements ActionListener{
 						vista.temperatura_Min.setForeground(new Color(30, 144, 255));
 						vista.nombre.setText(CiudadesTem.get(i).getNombre());
 						vista.nombre.setForeground(Color.BLACK);
-						vista.reproducirSonido2("src/sound/marmota.aiff");
+						vista.reproducirSonido2("src/sound/hasbu.aiff");
 						vista.Hasbulla.setVisible(true);
 						vista.escalera.setVisible(false);
 						vista.Hasbulla.setBounds(281, 434, 136, 136);
@@ -1047,8 +1047,7 @@ public class Controlador implements ActionListener{
 			}
 			
 			 
-			}
-	    
+			}	
 	    
 			
 	}

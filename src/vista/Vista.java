@@ -35,12 +35,10 @@ import javax.swing.JComboBox;
 import javax.swing.JSpinner;
 import java.awt.Font;
 import java.time.LocalDate;
-import java.awt.BorderLayout;
 import java.awt.Color;
 
 import javax.sound.sampled.AudioSystem;
 import javax.sound.sampled.Clip;
-import javax.swing.BorderFactory;
 import javax.swing.DefaultComboBoxModel;
 import java.awt.SystemColor;
 import javax.swing.UIManager;
@@ -92,10 +90,6 @@ public class Vista extends JFrame {
 	private JLabel lblNewLabel_4;
 	public JLabel Hasbulla;
 	public JLabel escalera;
-	private JPanel panelCastillaLeon;
-	private JPanel panelCataluna;
-	private JPanel panelAndalucia;
-	private JPanel panelCastillaLaMancha;
 
 	/**
 	 * Launch the application.
@@ -118,8 +112,6 @@ public class Vista extends JFrame {
 	 * Create the frame.
 	 */
 	public Vista() {
-		
-		
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 913, 745);
 		contentPane = new JPanel();
@@ -134,7 +126,7 @@ public class Vista extends JFrame {
 		Hasbulla.setIcon(new ImageIcon("src/img/hasbulla.png"));
 		Hasbulla.setBounds(784, 486, 136, 136);
 		Hasbulla.setVisible(false);
-		
+		contentPane.add(Hasbulla);
 		
 		escalera = new JLabel("");
 		escalera.setIcon(new ImageIcon("src/img/escalera.png"));
@@ -500,47 +492,6 @@ public class Vista extends JFrame {
 		lblNewLabel_2.setForeground(new Color(107, 157, 40));
 		lblNewLabel_2.setBounds(1, -23, 898, 708);
 		contentPane.add(lblNewLabel_2);
-		
-		panelAndalucia = new JPanel();
-		panelAndalucia.setBounds(0, 0, 10, 10);
-		contentPane.add(panelAndalucia);
-		panelAndalucia.setVisible(false);
-		ImageIcon imagenA;
-		imagenA = new ImageIcon("src/img/andalucia.png");
-        JLabel labelImagen = new JLabel(imagenA);
-        panelAndalucia.add(labelImagen);
-        configurarPanelComunidad(panelAndalucia, "Andalucía");
-		
-		panelCataluna = new JPanel();
-		panelCataluna.setBounds(0, 0, 10, 10);
-		contentPane.add(panelCataluna);
-		panelCataluna.setVisible(false);
-		ImageIcon imagenC;
-		imagenC = new ImageIcon("src/img/cataluna.png");
-		JLabel labelImagen1 = new JLabel(imagenC);
-		panelCataluna.add(labelImagen1);
-		 configurarPanelComunidad(panelCataluna, "Cataluña");
-		
-		panelCastillaLeon = new JPanel();
-		panelCastillaLeon.setBounds(0, 0, 10, 10);
-		contentPane.add(panelCastillaLeon);
-		panelCastillaLeon.setVisible(false);
-		ImageIcon imagenCl;
-		imagenCl = new ImageIcon("src/img/castillayleon.png");
-		JLabel labelImagen2 = new JLabel(imagenCl);
-		panelCastillaLeon.add(labelImagen2);
-		configurarPanelComunidad(panelCastillaLeon, "Castilla y León");
-		
-		panelCastillaLaMancha = new JPanel();
-		panelCastillaLaMancha.setBounds(1, 1, 898, 697);
-		contentPane.add(panelCastillaLaMancha);
-		panelCastillaLaMancha.setVisible(false);
-		ImageIcon imagenClm;
-		imagenClm = new ImageIcon("src/img/castillalamancha.png");
-		JLabel labelImagen3 = new JLabel(imagenClm);
-		panelCastillaLaMancha.add(labelImagen3);
-		configurarPanelComunidad(panelCastillaLaMancha, "Castilla-La Mancha");
-		
 	}
 	public static LocalDate diaSemana(LocalDate fecha, int dias) {
         return fecha.plusDays(dias);
@@ -573,11 +524,4 @@ public class Vista extends JFrame {
 	        comboBox.addItem("Cataluña");
 	        comboBox.addItem("Andalucía");
 	 }
-	 private void configurarPanelComunidad(JPanel panel, String nombreComunidad) {
-	        panel.setBorder(BorderFactory.createTitledBorder(nombreComunidad));
-	        getContentPane().add(panel, BorderLayout.CENTER);
-	    }
-	 
-	
-	 
 }
