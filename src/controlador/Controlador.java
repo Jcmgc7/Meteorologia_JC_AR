@@ -230,7 +230,7 @@ public class Controlador implements ActionListener{
         	
         	
         	if(e.getSource() == this.vista.inicio) {
-        		
+        	
         		LocalDate fecha = LocalDate.now();
         		int dia = 0;
         		CiudadesTem.clear();
@@ -250,7 +250,7 @@ public class Controlador implements ActionListener{
    	    			dia = 4;
    	    		}
    	    		recuperarInfo(Nom_ciudad, dia); 
-        		
+        		System.out.println(fecha.toString());
         		
         		for (int i=0;i<CiudadesTem.size();i++) {
         			if (CiudadesTem.get(i).getNombre().equals("barcelona")) {

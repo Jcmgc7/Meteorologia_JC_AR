@@ -51,7 +51,6 @@ public class Vista extends JFrame {
 	public JButton palma;
 	public JButton ceuta;
 	public JButton melilla;
-	public JButton day; 
 	public JLabel nombre;
 	public JLabel tiempo_E;
 	public JLabel temperatura_Max;
@@ -279,14 +278,6 @@ public class Vista extends JFrame {
 		listaDias.setModel(new DefaultComboBoxModel(new LocalDate[] {fecha, diaSemana(fecha,1), diaSemana(fecha,2), diaSemana(fecha,3), diaSemana(fecha,4)}));
 		listaDias.setBounds(722, 326, 116, 31);
 		contentPane.add(listaDias);
-		
-		day = new JButton("Confirmar dia");
-		day.setBounds(722, 392, 116, 21);
-		contentPane.add(day);
-		
-		JButton btnNewButton_1 = new JButton("New button");
-		btnNewButton_1.setBounds(737, 277, 85, 21);
-		contentPane.add(btnNewButton_1);
 	}
 	public static LocalDate diaSemana(LocalDate fecha, int dias) {
         return fecha.plusDays(dias);
