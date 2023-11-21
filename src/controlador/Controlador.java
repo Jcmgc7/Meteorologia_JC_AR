@@ -9,6 +9,7 @@ import java.util.Properties;
 import java.util.Scanner;
 import java.util.Set;
 
+import javax.swing.Icon;
 import javax.swing.ImageIcon;
 import javax.swing.JComponent;
 
@@ -28,6 +29,7 @@ import modelo.Ciudad;
 import modelo.modeloC;
 
 import java.awt.Color;
+import java.awt.Dimension;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
@@ -170,7 +172,7 @@ public class Controlador implements ActionListener{
 	    	if (CiudadesTem.get(ciudad).getTiempo().equals("Nuboso")) {
 	    		icono = "src/img/dia_nublado.png";
 	    	}
-	    	if (CiudadesTem.get(ciudad).getTiempo().equals("Lluvia") || CiudadesTem.get(ciudad).getTiempo().equals("Lluvia débil")) {
+	    	if (CiudadesTem.get(ciudad).getTiempo().equals("Lluvia") || CiudadesTem.get(ciudad).getTiempo().equals("Lluvia débil")||CiudadesTem.get(ciudad).getTiempo().equals("Chubascos dispersos")) {
 	    		icono = "src/img/lluvioso.png";
 	    	}
 	    	if (CiudadesTem.get(ciudad).getTiempo().equals("Niebla")) {

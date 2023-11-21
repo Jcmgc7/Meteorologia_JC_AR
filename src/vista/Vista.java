@@ -7,13 +7,15 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 import javax.swing.JLabel;
+import javax.swing.Icon;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JComboBox;
 import javax.swing.JSpinner;
 import java.awt.Font;
+import java.awt.Insets;
 import java.awt.Color;
-
+import java.awt.Dimension;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.JTextField;
@@ -263,6 +265,12 @@ public class Vista extends JFrame {
 		 tarragona = new JButton("");
 		tarragona.setBounds(457, 148, 36, 31);
 		contentPane.add(tarragona);
+		tarragona.setMargin(new Insets(0, 0, 0, 0)); 
+		tarragona.setContentAreaFilled(false); 
+		tarragona.setBorderPainted(false); 
+		tarragona.setFocusPainted(false);
+		
+		
 		
 		 toledo = new JButton("");
 		toledo.setBounds(235, 242, 36, 31);
