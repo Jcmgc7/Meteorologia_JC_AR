@@ -91,6 +91,7 @@ public class Vista extends JFrame {
 	private JLabel lblNewLabel_4;
 	public JLabel Hasbulla;
 	public JLabel escalera;
+	
 	public JPanel CLM;
 	public JLabel lblNewLabel_5;
 	public JLabel toletum;
@@ -102,6 +103,7 @@ public class Vista extends JFrame {
 	public JLabel alba;
 	public JLabel alba_1;
 	public JLabel alba_2;
+	
 	public JPanel cataluna;
 	public JLabel lblNewLabel_6;
 	public JLabel girona;
