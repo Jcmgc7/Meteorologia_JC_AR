@@ -234,6 +234,10 @@ public class Controlador implements ActionListener{
         		LocalDate fecha = LocalDate.now();
         		int dia = 0;
         		CiudadesTem.clear();
+        		vista.Hasbulla.setVisible(false);
+				vista.escalera.setVisible(false);
+				
+        		
    	    		if (vista.listaDias.getSelectedItem().toString().equals(fecha.toString())) {
    	    			dia = 0;
    	    		}
@@ -400,6 +404,10 @@ public class Controlador implements ActionListener{
 						vista.nombre.setText(CiudadesTem.get(i).getNombre());
 						vista.nombre.setForeground(Color.BLACK);
 						vista.reproducirSonido("src/sound/marmota.aiff");
+						vista.Hasbulla.setVisible(true);
+						vista.escalera.setVisible(true);
+						vista.Hasbulla.setBounds(1, 10, 136, 136);
+						vista.escalera.setBounds(-87, 39, 782, 220);
 					}
 				}
 			}
@@ -418,6 +426,10 @@ public class Controlador implements ActionListener{
 						vista.nombre.setText(CiudadesTem.get(i).getNombre());
 						vista.nombre.setForeground(Color.BLACK);
 						vista.reproducirSonido("src/sound/marmota.aiff");
+						vista.Hasbulla.setVisible(true);
+						vista.escalera.setVisible(true);
+						vista.Hasbulla.setBounds(124, -11, 136, 136);
+						vista.escalera.setBounds(34, 23, 782, 220);
 					}
 				}
 			}if(e.getSource() == this.vista.pamplona) {
@@ -435,6 +447,10 @@ public class Controlador implements ActionListener{
 						vista.nombre.setText(CiudadesTem.get(i).getNombre());
 						vista.nombre.setForeground(Color.BLACK);
 						vista.reproducirSonido("src/sound/marmota.aiff");
+						vista.Hasbulla.setVisible(true);
+						vista.escalera.setVisible(true);
+						vista.Hasbulla.setBounds(318, 23, 136, 136);
+						vista.escalera.setBounds(231, 71, 782, 220);
 					}
 				}
 			}if(e.getSource() == this.vista.santander) {
@@ -452,6 +468,10 @@ public class Controlador implements ActionListener{
 						vista.nombre.setText(CiudadesTem.get(i).getNombre());
 						vista.nombre.setForeground(Color.BLACK);
 						vista.reproducirSonido("src/sound/marmota.aiff");
+						vista.Hasbulla.setVisible(true);
+						vista.escalera.setVisible(true);
+						vista.Hasbulla.setBounds(211, -12, 136, 136);
+						vista.escalera.setBounds(117, 30, 782, 220);
 					}
 				}
 			}if(e.getSource() == this.vista.pais_vasco) {
@@ -469,6 +489,10 @@ public class Controlador implements ActionListener{
 						vista.nombre.setText(CiudadesTem.get(i).getNombre());
 						vista.nombre.setForeground(Color.BLACK);
 						vista.reproducirSonido("src/sound/marmota.aiff");
+						vista.Hasbulla.setVisible(true);
+						vista.escalera.setVisible(true);
+						vista.Hasbulla.setBounds(258, 23, 136, 136);
+						vista.escalera.setBounds(167, 71, 782, 220);
 					}
 				}
 			}if(e.getSource() == this.vista.huesca) {
@@ -486,6 +510,10 @@ public class Controlador implements ActionListener{
 						vista.nombre.setText(CiudadesTem.get(i).getNombre());
 						vista.nombre.setForeground(Color.BLACK);
 						vista.reproducirSonido("src/sound/marmota.aiff");
+						vista.Hasbulla.setVisible(true);
+						vista.escalera.setVisible(true);
+						vista.Hasbulla.setBounds(387, 75, 136, 136);
+						vista.escalera.setBounds(302, 97, 782, 220);
 					}
 				}
 			}if(e.getSource() == this.vista.zaragoza) {
@@ -503,6 +531,9 @@ public class Controlador implements ActionListener{
 						vista.nombre.setText(CiudadesTem.get(i).getNombre());
 						vista.nombre.setForeground(Color.BLACK);
 						vista.reproducirSonido("src/sound/marmota.aiff");
+						vista.Hasbulla.setVisible(true);
+						vista.escalera.setVisible(false);
+						vista.Hasbulla.setBounds(354, 92, 136, 136);
 					}
 				}
 			}if(e.getSource() == this.vista.tarragona) {
@@ -520,6 +551,9 @@ public class Controlador implements ActionListener{
 						vista.nombre.setText(CiudadesTem.get(i).getNombre());
 						vista.nombre.setForeground(Color.BLACK);
 						vista.reproducirSonido("src/sound/marmota.aiff");
+						vista.Hasbulla.setVisible(true);
+						vista.escalera.setVisible(false);
+						vista.Hasbulla.setBounds(419, 121, 136, 136);
 					}
 				}
 			}if(e.getSource() == this.vista.barcelona) {
@@ -537,8 +571,37 @@ public class Controlador implements ActionListener{
 						vista.nombre.setText(CiudadesTem.get(i).getNombre());
 						vista.nombre.setForeground(Color.BLACK);
 						vista.reproducirSonido("src/sound/marmota.aiff");
+						vista.Hasbulla.setVisible(true);
+						vista.escalera.setVisible(true);
+						vista.Hasbulla.setBounds(487, 96, 136, 136);
+						vista.escalera.setBounds(401, 137, 782, 220);
+						
+						
 					}
 				}
+			}if(e.getSource() == this.vista.gerona) {
+					
+					vista.tiempo_E.setText(CiudadesTem.get(0).getTiempo());
+					for (int i = 0; i<CiudadesTem.size();i++) {
+						
+						if (CiudadesTem.get(i).getNombre().equals("gerona")) {
+							vista.tiempo_E.setText(CiudadesTem.get(i).getTiempo());
+							vista.tiempo_E.setForeground(Color.BLACK);
+							vista.temperatura_Max.setText(CiudadesTem.get(i).getTemMax());
+							vista.temperatura_Max.setForeground(Color.BLACK);
+							vista.temperatura_Min.setText(CiudadesTem.get(i).getTemMin());
+							vista.temperatura_Min.setForeground(Color.BLACK);
+							vista.nombre.setText(CiudadesTem.get(i).getNombre());
+							vista.nombre.setForeground(Color.BLACK);
+							vista.reproducirSonido("src/sound/marmota.aiff");
+							vista.Hasbulla.setVisible(true);
+							vista.escalera.setVisible(true);
+							vista.Hasbulla.setBounds(516, 56, 136, 136);
+							vista.escalera.setBounds(432, 92, 782, 220);
+							
+						}
+					}
+				
 			}if(e.getSource() == this.vista.logrono) {
 				
 				vista.tiempo_E.setText(CiudadesTem.get(0).getTiempo());
@@ -554,6 +617,9 @@ public class Controlador implements ActionListener{
 						vista.nombre.setText(CiudadesTem.get(i).getNombre());
 						vista.nombre.setForeground(Color.BLACK);
 						vista.reproducirSonido("src/sound/marmota.aiff");
+						vista.Hasbulla.setVisible(true);
+						vista.escalera.setVisible(false);
+						vista.Hasbulla.setBounds(387, 75, 136, 136);
 					}
 				}
 			}if(e.getSource() == this.vista.leon) {
@@ -571,6 +637,9 @@ public class Controlador implements ActionListener{
 						vista.nombre.setText(CiudadesTem.get(i).getNombre());
 						vista.nombre.setForeground(Color.BLACK);
 						vista.reproducirSonido("src/sound/marmota.aiff");
+						vista.Hasbulla.setVisible(true);
+						vista.escalera.setVisible(false);
+						vista.Hasbulla.setBounds(114, 43, 136, 136);
 					}
 				}
 			}if(e.getSource() == this.vista.valladolid) {
@@ -588,6 +657,9 @@ public class Controlador implements ActionListener{
 						vista.nombre.setText(CiudadesTem.get(i).getNombre());
 						vista.nombre.setForeground(Color.BLACK);
 						vista.reproducirSonido("src/sound/marmota.aiff");
+						vista.Hasbulla.setVisible(true);
+						vista.escalera.setVisible(false);
+						vista.Hasbulla.setBounds(178, 92, 136, 136);
 					}
 				}
 			}if(e.getSource() == this.vista.burgos) {
@@ -605,6 +677,9 @@ public class Controlador implements ActionListener{
 						vista.nombre.setText(CiudadesTem.get(i).getNombre());
 						vista.nombre.setForeground(Color.BLACK);
 						vista.reproducirSonido("src/sound/marmota.aiff");
+						vista.Hasbulla.setVisible(true);
+						vista.escalera.setVisible(false);
+						vista.Hasbulla.setBounds(235, 55, 136, 136);
 					}
 				}
 			}if(e.getSource() == this.vista.madrid) {
@@ -622,6 +697,9 @@ public class Controlador implements ActionListener{
 						vista.nombre.setText(CiudadesTem.get(i).getNombre());
 						vista.nombre.setForeground(Color.BLACK);
 						vista.reproducirSonido("src/sound/marmota.aiff");
+						vista.Hasbulla.setVisible(true);
+						vista.escalera.setVisible(false);
+						vista.Hasbulla.setBounds(224, 170, 136, 136);
 					}
 				}
 			}if(e.getSource() == this.vista.toledo) {
@@ -639,6 +717,9 @@ public class Controlador implements ActionListener{
 						vista.nombre.setText(CiudadesTem.get(i).getNombre());
 						vista.nombre.setForeground(Color.BLACK);
 						vista.reproducirSonido("src/sound/marmota.aiff");
+						vista.Hasbulla.setVisible(true);
+						vista.escalera.setVisible(false);
+						vista.Hasbulla.setBounds(224, 221, 136, 136);
 					}
 				}
 			}if(e.getSource() == this.vista.ciudad_real) {
@@ -656,6 +737,9 @@ public class Controlador implements ActionListener{
 						vista.nombre.setText(CiudadesTem.get(i).getNombre());
 						vista.nombre.setForeground(Color.BLACK);
 						vista.reproducirSonido("src/sound/marmota.aiff");
+						vista.Hasbulla.setVisible(true);
+						vista.escalera.setVisible(false);
+						vista.Hasbulla.setBounds(208, 261, 136, 136);
 					}
 					
 				}
@@ -674,6 +758,9 @@ public class Controlador implements ActionListener{
 						vista.nombre.setText(CiudadesTem.get(i).getNombre());
 						vista.nombre.setForeground(Color.BLACK);
 						vista.reproducirSonido("src/sound/marmota.aiff");
+						vista.Hasbulla.setVisible(true);
+						vista.escalera.setVisible(false);
+						vista.Hasbulla.setBounds(306, 260, 136, 136);
 					}
 				}
 			}if(e.getSource() == this.vista.valencia) {
@@ -691,6 +778,9 @@ public class Controlador implements ActionListener{
 						vista.nombre.setText(CiudadesTem.get(i).getNombre());
 						vista.nombre.setForeground(Color.BLACK);
 						vista.reproducirSonido("src/sound/marmota.aiff");
+						vista.Hasbulla.setVisible(true);
+						vista.escalera.setVisible(false);
+						vista.Hasbulla.setBounds(377, 231, 136, 136);
 					}
 				}
 			}if(e.getSource() == this.vista.alacant) {
@@ -708,6 +798,9 @@ public class Controlador implements ActionListener{
 						vista.nombre.setText(CiudadesTem.get(i).getNombre());
 						vista.nombre.setForeground(Color.BLACK);
 						vista.reproducirSonido("src/sound/marmota.aiff");
+						vista.Hasbulla.setVisible(true);
+						vista.escalera.setVisible(false);
+						vista.Hasbulla.setBounds(400, 298, 136, 136);
 					}
 				}
 			}if(e.getSource() == this.vista.caceres) {
@@ -725,6 +818,9 @@ public class Controlador implements ActionListener{
 						vista.nombre.setText(CiudadesTem.get(i).getNombre());
 						vista.nombre.setForeground(Color.BLACK);
 						vista.reproducirSonido("src/sound/marmota.aiff");
+						vista.Hasbulla.setVisible(true);
+						vista.escalera.setVisible(false);
+						vista.Hasbulla.setBounds(114, 201, 136, 136);
 					}
 				}
 			}if(e.getSource() == this.vista.merida) {
@@ -742,6 +838,9 @@ public class Controlador implements ActionListener{
 						vista.nombre.setText(CiudadesTem.get(i).getNombre());
 						vista.nombre.setForeground(Color.BLACK);
 						vista.reproducirSonido("src/sound/marmota.aiff");
+						vista.Hasbulla.setVisible(true);
+						vista.escalera.setVisible(false);
+						vista.Hasbulla.setBounds(91, 260, 136, 136);
 					}
 				}
 			}if(e.getSource() == this.vista.sevilla) {
@@ -759,6 +858,9 @@ public class Controlador implements ActionListener{
 						vista.nombre.setText(CiudadesTem.get(i).getNombre());
 						vista.nombre.setForeground(Color.BLACK);
 						vista.reproducirSonido("src/sound/marmota.aiff");
+						vista.Hasbulla.setVisible(true);
+						vista.escalera.setVisible(false);
+						vista.Hasbulla.setBounds(117, 350, 136, 136);
 					}
 				}
 			}if(e.getSource() == this.vista.cadiz) {
@@ -776,6 +878,9 @@ public class Controlador implements ActionListener{
 						vista.nombre.setText(CiudadesTem.get(i).getNombre());
 						vista.nombre.setForeground(Color.BLACK);
 						vista.reproducirSonido("src/sound/marmota.aiff");
+						vista.Hasbulla.setVisible(true);
+						vista.escalera.setVisible(false);
+						vista.Hasbulla.setBounds(117, 408, 136, 136);
 					}
 				}
 			}if(e.getSource() == this.vista.cordoba) {
@@ -793,6 +898,9 @@ public class Controlador implements ActionListener{
 						vista.nombre.setText(CiudadesTem.get(i).getNombre());
 						vista.nombre.setForeground(Color.BLACK);
 						vista.reproducirSonido("src/sound/marmota.aiff");
+						vista.Hasbulla.setVisible(true);
+						vista.escalera.setVisible(false);
+						vista.Hasbulla.setBounds(163, 318, 136, 136);
 					}
 				}
 			}if(e.getSource() == this.vista.cartago) {
@@ -810,6 +918,9 @@ public class Controlador implements ActionListener{
 						vista.nombre.setText(CiudadesTem.get(i).getNombre());
 						vista.nombre.setForeground(Color.BLACK);
 						vista.reproducirSonido("src/sound/marmota.aiff");
+						vista.Hasbulla.setVisible(true);
+						vista.escalera.setVisible(false);
+						vista.Hasbulla.setBounds(334, 318, 136, 136);
 					}
 				}
 			}if(e.getSource() == this.vista.palma) {
@@ -827,6 +938,9 @@ public class Controlador implements ActionListener{
 						vista.nombre.setText(CiudadesTem.get(i).getNombre());
 						vista.nombre.setForeground(Color.BLACK);
 						vista.reproducirSonido("src/sound/marmota.aiff");
+						vista.Hasbulla.setVisible(true);
+						vista.escalera.setVisible(false);
+						vista.Hasbulla.setBounds(490, 221, 136, 136);
 					}
 				}
 			}if(e.getSource() == this.vista.santa_cruz) {
@@ -844,6 +958,9 @@ public class Controlador implements ActionListener{
 						vista.nombre.setText(CiudadesTem.get(i).getNombre());
 						vista.nombre.setForeground(Color.BLACK);
 						vista.reproducirSonido("src/sound/marmota.aiff");
+						vista.Hasbulla.setVisible(true);
+						vista.escalera.setVisible(false);
+						vista.Hasbulla.setBounds(411, 429, 136, 136);
 					}
 				}
 			}if(e.getSource() == this.vista.palma_canaria) {
@@ -861,6 +978,9 @@ public class Controlador implements ActionListener{
 						vista.nombre.setText(CiudadesTem.get(i).getNombre());
 						vista.nombre.setForeground(Color.BLACK);
 						vista.reproducirSonido("src/sound/marmota.aiff");
+						vista.Hasbulla.setVisible(true);
+						vista.escalera.setVisible(false);
+						vista.Hasbulla.setBounds(467, 440, 136, 136);
 					}
 				}
 			}if(e.getSource() == this.vista.ceuta) {
@@ -878,6 +998,9 @@ public class Controlador implements ActionListener{
 						vista.nombre.setText(CiudadesTem.get(i).getNombre());
 						vista.nombre.setForeground(Color.BLACK);
 						vista.reproducirSonido("src/sound/marmota.aiff");
+						vista.Hasbulla.setVisible(true);
+						vista.escalera.setVisible(false);
+						vista.Hasbulla.setBounds(135, 439, 136, 136);
 					}
 				}
 			}if(e.getSource() == this.vista.melilla) {
@@ -895,6 +1018,9 @@ public class Controlador implements ActionListener{
 						vista.nombre.setText(CiudadesTem.get(i).getNombre());
 						vista.nombre.setForeground(Color.BLACK);
 						vista.reproducirSonido("src/sound/marmota.aiff");
+						vista.Hasbulla.setVisible(true);
+						vista.escalera.setVisible(false);
+						vista.Hasbulla.setBounds(281, 434, 136, 136);
 						
 					}
 				}

@@ -88,6 +88,8 @@ public class Vista extends JFrame {
 	private JLabel lblNewLabel_2;
 	private JLabel lblNewLabel_3;
 	private JLabel lblNewLabel_4;
+	public JLabel Hasbulla;
+	public JLabel escalera;
 
 	/**
 	 * Launch the application.
@@ -119,6 +121,18 @@ public class Vista extends JFrame {
 
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
+		
+		Hasbulla = new JLabel("");
+		Hasbulla.setIcon(new ImageIcon("C:\\Users\\Juan Carlos\\Downloads\\hasbulla.png"));
+		Hasbulla.setBounds(784, 486, 136, 136);
+		Hasbulla.setVisible(false);
+		contentPane.add(Hasbulla);
+		
+		escalera = new JLabel("");
+		escalera.setIcon(new ImageIcon("C:\\Users\\Juan Carlos\\Documents\\2 DAM\\Interfaces\\Meteorologia_España\\src\\img\\escalera.png"));
+		escalera.setBounds(665, 419, 782, 220);
+		escalera.setVisible(false);
+		contentPane.add(escalera);
 		
 		cartago = new JButton("");
 		cartago.setBounds(354, 353, 36, 31);
@@ -432,7 +446,7 @@ public class Vista extends JFrame {
 		contentPane.add(listaComunidad);
 		
 		JLabel mapE = new JLabel("");
-		mapE.setIcon(new ImageIcon("src/img/mapeja.png"));
+		mapE.setIcon(new ImageIcon("C:\\Users\\Juan Carlos\\Documents\\2 DAM\\Interfaces\\Meteorologia_España\\src\\img\\mapeja.png"));
 		mapE.setBounds(1, 1, 592, 539);
 		contentPane.add(mapE);
 		
