@@ -42,6 +42,7 @@ import javax.sound.sampled.Clip;
 import javax.swing.DefaultComboBoxModel;
 import java.awt.SystemColor;
 import javax.swing.UIManager;
+import javax.swing.SwingConstants;
 
 public class Vista extends JFrame {
 	
@@ -90,6 +91,73 @@ public class Vista extends JFrame {
 	private JLabel lblNewLabel_4;
 	public JLabel Hasbulla;
 	public JLabel escalera;
+	public JPanel CLM;
+	public JLabel lblNewLabel_5;
+	public JLabel toletum;
+	public JLabel ciu;
+	public JLabel toletum_2;
+	public JLabel toletum_3;
+	public JLabel ciu_1;
+	public JLabel ciu_2;
+	public JLabel alba;
+	public JLabel alba_1;
+	public JLabel alba_2;
+	public JPanel cataluna;
+	public JLabel lblNewLabel_6;
+	public JLabel girona;
+	public JLabel girona_1;
+	public JLabel girona_2;
+	public JLabel barca;
+	public JLabel barca_1;
+	public JLabel barca_2;
+	public JLabel tarraco;
+	public JLabel tarraco_1;
+	public JLabel tarraco_2;
+	
+	public JPanel CYL;
+	public JLabel lblNewLabel_7;
+	public JLabel numantia;
+	public JLabel numantia_1;
+	public JLabel numantia_2;
+	public JLabel Legio;
+	public JLabel Legio_1;
+	public JLabel Legio_2;
+	public JLabel Balad;
+	public JLabel Balad_1;
+	public JLabel Balad_2;
+	public JLabel salamantica;
+	public JLabel salamantica_1;
+	public JLabel salamantica_2;
+	
+	public JPanel Arag;
+	public JLabel lblNewLabel_8;
+	public JLabel osca;
+	public JLabel osca_1;
+	public JLabel osca_2;
+	public JLabel saraqusta;
+	public JLabel saraqusta_1;
+	public JLabel saraqusta_2;
+	
+	public JPanel andalu;
+	public JLabel lblNewLabel_9;
+	public JLabel corduba;
+	public JLabel corduba_1;
+	public JLabel corduba_2;
+	public JLabel hispalis;
+	public JLabel hispalis_1;
+	public JLabel hispalis_2;
+	public JLabel gadir;
+	public JLabel gadir_1;
+	public JLabel gadir_2;
+	
+	public JPanel euskadi;
+	public JLabel lblNewLabel_10;
+	public JLabel sanctus;
+	public JLabel sanctus_1;
+	public JLabel sanctus_2;
+	public JLabel gasteiz;
+	public JLabel gasteiz_1;
+	public JLabel gasteiz_2;
 
 	/**
 	 * Launch the application.
@@ -126,6 +194,295 @@ public class Vista extends JFrame {
 		Hasbulla.setIcon(new ImageIcon("src/img/hasbulla.png"));
 		Hasbulla.setBounds(784, 486, 136, 136);
 		Hasbulla.setVisible(false);
+		
+		euskadi = new JPanel();
+		euskadi.setBackground(new Color(240, 240, 240));
+		euskadi.setBounds(1, 1, 592, 539);
+		contentPane.add(euskadi);
+		euskadi.setVisible(false);
+		euskadi.setLayout(null);
+		
+		sanctus_2 = new JLabel("");
+		sanctus_2.setBounds(421, 200, 36, 31);
+		euskadi.add(sanctus_2);
+		
+		sanctus_1 = new JLabel("");
+		sanctus_1.setBounds(339, 200, 36, 31);
+		euskadi.add(sanctus_1);
+		
+		gasteiz_2 = new JLabel("");
+		gasteiz_2.setBounds(309, 313, 36, 31);
+		euskadi.add(gasteiz_2);
+		
+		gasteiz_1 = new JLabel("");
+		gasteiz_1.setBounds(150, 313, 36, 31);
+		euskadi.add(gasteiz_1);
+		
+		gasteiz = new JLabel("");
+		gasteiz.setBounds(222, 257, 36, 31);
+		euskadi.add(gasteiz);
+		
+		sanctus = new JLabel("");
+		sanctus.setBounds(389, 137, 36, 31);
+		euskadi.add(sanctus);
+		
+		lblNewLabel_10 = new JLabel("");
+		lblNewLabel_10.setIcon(new ImageIcon("C:\\Users\\Juan Carlos\\Downloads\\pais vasco.jpg"));
+		lblNewLabel_10.setHorizontalAlignment(SwingConstants.CENTER);
+		lblNewLabel_10.setForeground(Color.WHITE);
+		lblNewLabel_10.setBackground(Color.WHITE);
+		lblNewLabel_10.setBounds(0, 0, 592, 539);
+		euskadi.add(lblNewLabel_10);
+		
+		andalu = new JPanel();
+		andalu.setBounds(1, 1, 592, 539);
+		contentPane.add(andalu);
+		andalu.setVisible(false);
+		andalu.setLayout(null);
+		
+		corduba_2 = new JLabel("");
+		corduba_2.setBounds(272, 199, 36, 31);
+		andalu.add(corduba_2);
+		
+		gadir_1 = new JLabel("");
+		gadir_1.setBounds(131, 384, 36, 31);
+		andalu.add(gadir_1);
+		
+		hispalis = new JLabel("");
+		hispalis.setBounds(150, 215, 36, 31);
+		andalu.add(hispalis);
+		
+		corduba = new JLabel("");
+		corduba.setBounds(240, 137, 36, 31);
+		andalu.add(corduba);
+		
+		gadir = new JLabel("");
+		gadir.setBounds(150, 336, 36, 31);
+		andalu.add(gadir);
+		
+		gadir_2 = new JLabel("");
+		gadir_2.setBounds(179, 384, 36, 31);
+		andalu.add(gadir_2);
+		
+		corduba_1 = new JLabel("");
+		corduba_1.setBounds(226, 184, 36, 31);
+		andalu.add(corduba_1);
+		
+		hispalis_1 = new JLabel("");
+		hispalis_1.setBounds(131, 265, 36, 31);
+		andalu.add(hispalis_1);
+		
+		hispalis_2 = new JLabel("");
+		hispalis_2.setBounds(191, 265, 36, 31);
+		andalu.add(hispalis_2);
+		
+		lblNewLabel_9 = new JLabel("");
+		lblNewLabel_9.setIcon(new ImageIcon("C:\\Users\\Juan Carlos\\Downloads\\andalucia.jpg"));
+		lblNewLabel_9.setHorizontalAlignment(SwingConstants.CENTER);
+		lblNewLabel_9.setForeground(Color.WHITE);
+		lblNewLabel_9.setBackground(Color.WHITE);
+		lblNewLabel_9.setBounds(0, 0, 592, 539);
+		andalu.add(lblNewLabel_9);
+		
+		Arag = new JPanel();
+		Arag.setBackground(new Color(240, 240, 240));
+		Arag.setBounds(1, 1, 592, 539);
+		contentPane.add(Arag);
+		Arag.setVisible(false);
+		Arag.setLayout(null);
+		
+		saraqusta = new JLabel("");
+		saraqusta.setBounds(191, 198, 36, 31);
+		Arag.add(saraqusta);
+		
+		saraqusta_1 = new JLabel("");
+		saraqusta_1.setBounds(159, 253, 36, 31);
+		Arag.add(saraqusta_1);
+		
+		osca = new JLabel("");
+		osca.setBounds(329, 66, 36, 31);
+		Arag.add(osca);
+		
+		saraqusta_2 = new JLabel("");
+		saraqusta_2.setBounds(246, 253, 36, 31);
+		Arag.add(saraqusta_2);
+		
+		osca_1 = new JLabel("");
+		osca_1.setBounds(376, 113, 36, 31);
+		Arag.add(osca_1);
+		
+		osca_2 = new JLabel("");
+		osca_2.setBounds(301, 113, 36, 31);
+		Arag.add(osca_2);
+		
+		lblNewLabel_8 = new JLabel("");
+		lblNewLabel_8.setIcon(new ImageIcon("C:\\Users\\Juan Carlos\\Downloads\\arag (1).png"));
+		lblNewLabel_8.setHorizontalAlignment(SwingConstants.CENTER);
+		lblNewLabel_8.setForeground(Color.WHITE);
+		lblNewLabel_8.setBackground(Color.WHITE);
+		lblNewLabel_8.setBounds(0, 0, 592, 539);
+		Arag.add(lblNewLabel_8);
+		
+		CYL = new JPanel();
+		CYL.setBounds(1, 1, 592, 539);
+		contentPane.add(CYL);
+		CYL.setVisible(false);
+		CYL.setLayout(null);
+		
+		numantia_2 = new JLabel("");
+		numantia_2.setBounds(390, 173, 36, 31);
+		CYL.add(numantia_2);
+		
+		salamantica_2 = new JLabel("");
+		salamantica_2.setBounds(115, 397, 36, 31);
+		CYL.add(salamantica_2);
+		
+		numantia = new JLabel("");
+		numantia.setBounds(368, 126, 36, 31);
+		CYL.add(numantia);
+		
+		salamantica = new JLabel("");
+		salamantica.setBounds(90, 356, 36, 31);
+		CYL.add(salamantica);
+		
+		Balad_1 = new JLabel("");
+		Balad_1.setBounds(213, 297, 36, 31);
+		CYL.add(Balad_1);
+		
+		Legio_1 = new JLabel("");
+		Legio_1.setBounds(79, 145, 36, 31);
+		CYL.add(Legio_1);
+		
+		Legio_2 = new JLabel("");
+		Legio_2.setBounds(151, 145, 36, 31);
+		CYL.add(Legio_2);
+		
+		salamantica_1 = new JLabel("");
+		salamantica_1.setBounds(51, 396, 36, 31);
+		CYL.add(salamantica_1);
+		
+		Balad = new JLabel("");
+		Balad.setBounds(213, 246, 36, 31);
+		CYL.add(Balad);
+		
+		Balad_2 = new JLabel("");
+		Balad_2.setBounds(278, 267, 36, 31);
+		CYL.add(Balad_2);
+		
+		numantia_1 = new JLabel("");
+		numantia_1.setBounds(336, 173, 36, 31);
+		CYL.add(numantia_1);
+		
+		Legio = new JLabel("");
+		Legio.setBounds(115, 100, 36, 31);
+		CYL.add(Legio);
+		
+		lblNewLabel_7 = new JLabel("");
+		lblNewLabel_7.setIcon(new ImageIcon("C:\\Users\\Juan Carlos\\Downloads\\castillayleon.jpg"));
+		lblNewLabel_7.setHorizontalAlignment(SwingConstants.CENTER);
+		lblNewLabel_7.setForeground(Color.WHITE);
+		lblNewLabel_7.setBackground(Color.WHITE);
+		lblNewLabel_7.setBounds(0, 0, 592, 539);
+		CYL.add(lblNewLabel_7);
+		
+		cataluna = new JPanel();
+		cataluna.setBackground(new Color(240, 240, 240));
+		cataluna.setBounds(1, 1, 592, 539);
+		contentPane.add(cataluna);
+		cataluna.setVisible(false);
+		cataluna.setLayout(null);
+		
+		girona_1 = new JLabel("");
+		girona_1.setBounds(426, 195, 36, 31);
+		cataluna.add(girona_1);
+		
+		barca_2 = new JLabel("");
+		barca_2.setBounds(347, 271, 36, 31);
+		cataluna.add(barca_2);
+		
+		tarraco_2 = new JLabel("");
+		tarraco_2.setBounds(90, 426, 36, 31);
+		cataluna.add(tarraco_2);
+		
+		barca = new JLabel("");
+		barca.setBounds(306, 236, 36, 31);
+		cataluna.add(barca);
+		
+		girona = new JLabel("");
+		girona.setBounds(447, 144, 36, 31);
+		cataluna.add(girona);
+		
+		tarraco = new JLabel("");
+		tarraco.setBounds(90, 369, 36, 31);
+		cataluna.add(tarraco);
+		
+		tarraco_1 = new JLabel("");
+		tarraco_1.setBounds(163, 381, 36, 31);
+		cataluna.add(tarraco_1);
+		
+		girona_2 = new JLabel("");
+		girona_2.setBounds(488, 195, 36, 31);
+		cataluna.add(girona_2);
+		
+		barca_1 = new JLabel("");
+		barca_1.setBounds(267, 284, 36, 31);
+		cataluna.add(barca_1);
+		
+		lblNewLabel_6 = new JLabel("");
+		lblNewLabel_6.setHorizontalAlignment(SwingConstants.CENTER);
+		lblNewLabel_6.setBounds(0, 0, 592, 539);
+		lblNewLabel_6.setForeground(new Color(255, 255, 255));
+		lblNewLabel_6.setIcon(new ImageIcon("C:\\Users\\Juan Carlos\\Downloads\\cataluna.jpg"));
+		lblNewLabel_6.setBackground(Color.WHITE);
+		cataluna.add(lblNewLabel_6);
+		
+		CLM = new JPanel();
+		CLM.setBounds(1, 1, 592, 539);
+		contentPane.add(CLM);
+		CLM.setVisible(false);
+		CLM.setLayout(null);
+		
+		toletum = new JLabel("");
+		toletum.setBounds(132, 205, 36, 31);
+		CLM.add(toletum);
+		
+		alba = new JLabel("");
+		alba.setBounds(419, 360, 36, 31);
+		CLM.add(alba);
+		
+		toletum_2 = new JLabel("");
+		toletum_2.setBounds(192, 244, 36, 31);
+		CLM.add(toletum_2);
+		
+		alba_1 = new JLabel("");
+		alba_1.setBounds(378, 411, 36, 31);
+		CLM.add(alba_1);
+		
+		alba_2 = new JLabel("");
+		alba_2.setBounds(449, 411, 36, 31);
+		CLM.add(alba_2);
+		
+		toletum_3 = new JLabel("");
+		toletum_3.setBounds(89, 251, 36, 31);
+		CLM.add(toletum_3);
+		
+		ciu = new JLabel("");
+		ciu.setBounds(166, 375, 36, 31);
+		CLM.add(ciu);
+		
+		ciu_2 = new JLabel("");
+		ciu_2.setBounds(192, 420, 36, 31);
+		CLM.add(ciu_2);
+		
+		ciu_1 = new JLabel("");
+		ciu_1.setBounds(119, 411, 36, 31);
+		CLM.add(ciu_1);
+		
+		lblNewLabel_5 = new JLabel("");
+		lblNewLabel_5.setBackground(new Color(255, 255, 255));
+		lblNewLabel_5.setIcon(new ImageIcon("C:\\Users\\Juan Carlos\\Downloads\\castillalamancha.jpg"));
+		lblNewLabel_5.setBounds(1, 1, 592, 539);
+		CLM.add(lblNewLabel_5);
 		contentPane.add(Hasbulla);
 		
 		escalera = new JLabel("");
@@ -518,10 +875,12 @@ public class Vista extends JFrame {
         }
     }
 	 private void configurarComboBox(JComboBox<String> comboBox) {
-		 	comboBox.addItem("Mapa de Españita");
+		 	comboBox.addItem("Mapa de Espanita");
 	        comboBox.addItem("Castilla-La Mancha");
-	        comboBox.addItem("Castilla y León");
-	        comboBox.addItem("Cataluña");
-	        comboBox.addItem("Andalucía");
+	        comboBox.addItem("Castilla y Leon");
+	        comboBox.addItem("Cataluna");
+	        comboBox.addItem("Andalucia");
+	        comboBox.addItem("Pais_Vasco");
+	        comboBox.addItem("Aragon");
 	 }
 }

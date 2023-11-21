@@ -236,6 +236,12 @@ public class Controlador implements ActionListener{
         		CiudadesTem.clear();
         		vista.Hasbulla.setVisible(false);
 				vista.escalera.setVisible(false);
+				vista.CLM.setVisible(false);
+				vista.andalu.setVisible(false);
+				vista.CYL.setVisible(false);
+				vista.Arag.setVisible(false);
+				vista.cataluna.setVisible(false);
+				vista.euskadi.setVisible(false);
 				
         		
    	    		if (vista.listaDias.getSelectedItem().toString().equals(fecha.toString())) {
@@ -253,10 +259,170 @@ public class Controlador implements ActionListener{
    	    		if (vista.listaDias.getSelectedItem().toString().equals(fecha.plusDays(4).toString())) {
    	    			dia = 4;
    	    		}
-   	    		recuperarInfo(Nom_ciudad, dia); 
-        		
+   	    		
+   	    		
+   	    		recuperarInfo(Nom_ciudad, dia);
+   	    		
         		
         		for (int i=0;i<CiudadesTem.size();i++) {
+        			
+        			
+        			if(vista.listaComunidad.getSelectedItem().toString().equals("Castilla-La Mancha")) {
+       	    			vista.CLM.setVisible(true);
+       	    			if (CiudadesTem.get(i).getNombre().equals("ciudad_real")) {
+       	    				String icono = temperature(CiudadesTem, i);
+       	    				vista.ciu.setIcon(new ImageIcon(icono));
+       	    				vista.ciu_1.setText(CiudadesTem.get(i).getTemMax()+"Cº");
+       	    				vista.ciu_1.setForeground(Color.BLUE);
+       	    				vista.ciu_2.setText(CiudadesTem.get(i).getTemMin()+"Cº");
+       	    				vista.ciu_2.setForeground(Color.RED);
+       	    			}
+       	    			if (CiudadesTem.get(i).getNombre().equals("toledo")) {
+       	    				String icono = temperature(CiudadesTem, i);
+       	    				vista.toletum.setIcon(new ImageIcon(icono));
+       	    				vista.toletum_3.setText(CiudadesTem.get(i).getTemMax()+"Cº");
+       	    				vista.toletum_3.setForeground(Color.BLUE);
+       	    				vista.toletum_2.setText(CiudadesTem.get(i).getTemMin()+"Cº");
+       	    				vista.toletum_2.setForeground(Color.RED);
+       	    			}
+       	    			if (CiudadesTem.get(i).getNombre().equals("albacete")) {
+       	    				String icono = temperature(CiudadesTem, i);
+       	    				vista.alba.setIcon(new ImageIcon(icono));
+       	    				vista.alba_1.setText(CiudadesTem.get(i).getTemMax()+"Cº");
+       	    				vista.alba_1.setForeground(Color.BLUE);
+       	    				vista.alba_2.setText(CiudadesTem.get(i).getTemMin()+"Cº");
+       	    				vista.alba_2.setForeground(Color.RED);
+       	    			}
+       	    		}
+        			if(vista.listaComunidad.getSelectedItem().toString().equals("Cataluna")) {
+       	    			vista.cataluna.setVisible(true);
+       	    			if (CiudadesTem.get(i).getNombre().equals("barcelona")) {
+       	    				String icono = temperature(CiudadesTem, i);
+       	    				vista.barca.setIcon(new ImageIcon(icono));
+       	    				vista.barca_1.setText(CiudadesTem.get(i).getTemMax()+"Cº");
+       	    				vista.barca_1.setForeground(Color.BLUE);
+       	    				vista.barca_2.setText(CiudadesTem.get(i).getTemMin()+"Cº");
+       	    				vista.barca_2.setForeground(Color.RED);
+       	    			}
+       	    			if (CiudadesTem.get(i).getNombre().equals("tarragona")) {
+       	    				String icono = temperature(CiudadesTem, i);
+       	    				vista.tarraco.setIcon(new ImageIcon(icono));
+       	    				vista.tarraco_1.setText(CiudadesTem.get(i).getTemMax()+"Cº");
+       	    				vista.tarraco_1.setForeground(Color.BLUE);
+       	    				vista.tarraco_2.setText(CiudadesTem.get(i).getTemMin()+"Cº");
+       	    				vista.tarraco_2.setForeground(Color.RED);
+       	    			}
+       	    			if (CiudadesTem.get(i).getNombre().equals("gerona")) {
+       	    				String icono = temperature(CiudadesTem, i);
+       	    				vista.girona.setIcon(new ImageIcon(icono));
+       	    				vista.girona_1.setText(CiudadesTem.get(i).getTemMax()+"Cº");
+       	    				vista.girona_1.setForeground(Color.BLUE);
+       	    				vista.girona_2.setText(CiudadesTem.get(i).getTemMin()+"Cº");
+       	    				vista.girona_2.setForeground(Color.RED);
+       	    			}
+       	    		}
+        			if(vista.listaComunidad.getSelectedItem().toString().equals("Andalucia")) {
+       	    			vista.andalu.setVisible(true);
+       	    			if (CiudadesTem.get(i).getNombre().equals("cordoba")) {
+       	    				String icono = temperature(CiudadesTem, i);
+       	    				vista.corduba.setIcon(new ImageIcon(icono));
+       	    				vista.corduba_1.setText(CiudadesTem.get(i).getTemMax()+"Cº");
+       	    				vista.corduba_1.setForeground(Color.BLUE);
+       	    				vista.corduba_2.setText(CiudadesTem.get(i).getTemMin()+"Cº");
+       	    				vista.corduba_2.setForeground(Color.RED);
+       	    			}
+       	    			if (CiudadesTem.get(i).getNombre().equals("sevilla")) {
+       	    				String icono = temperature(CiudadesTem, i);
+       	    				vista.hispalis.setIcon(new ImageIcon(icono));
+       	    				vista.hispalis_1.setText(CiudadesTem.get(i).getTemMax()+"Cº");
+       	    				vista.hispalis_1.setForeground(Color.BLUE);
+       	    				vista.hispalis_2.setText(CiudadesTem.get(i).getTemMin()+"Cº");
+       	    				vista.hispalis_2.setForeground(Color.RED);
+       	    			}
+       	    			if (CiudadesTem.get(i).getNombre().equals("cadiz")) {
+       	    				String icono = temperature(CiudadesTem, i);
+       	    				vista.gadir.setIcon(new ImageIcon(icono));
+       	    				vista.gadir_1.setText(CiudadesTem.get(i).getTemMax()+"Cº");
+       	    				vista.gadir_1.setForeground(Color.BLUE);
+       	    				vista.gadir_2.setText(CiudadesTem.get(i).getTemMin()+"Cº");
+       	    				vista.gadir_2.setForeground(Color.RED);
+       	    			}
+       	    		}
+        			if(vista.listaComunidad.getSelectedItem().toString().equals("Aragon")) {
+       	    			vista.Arag.setVisible(true);
+       	    			if (CiudadesTem.get(i).getNombre().equals("huesca")) {
+       	    				String icono = temperature(CiudadesTem, i);
+       	    				vista.osca.setIcon(new ImageIcon(icono));
+       	    				vista.osca_1.setText(CiudadesTem.get(i).getTemMax()+"Cº");
+       	    				vista.osca_1.setForeground(Color.BLUE);
+       	    				vista.osca_2.setText(CiudadesTem.get(i).getTemMin()+"Cº");
+       	    				vista.osca_2.setForeground(Color.RED);
+       	    			}
+       	    			if (CiudadesTem.get(i).getNombre().equals("zaragoza")) {
+       	    				String icono = temperature(CiudadesTem, i);
+       	    				vista.saraqusta.setIcon(new ImageIcon(icono));
+       	    				vista.saraqusta_1.setText(CiudadesTem.get(i).getTemMax()+"Cº");
+       	    				vista.saraqusta_1.setForeground(Color.BLUE);
+       	    				vista.saraqusta_2.setText(CiudadesTem.get(i).getTemMin()+"Cº");
+       	    				vista.saraqusta_2.setForeground(Color.RED);
+       	    			}
+       	    		}
+        			if(vista.listaComunidad.getSelectedItem().toString().equals("Pais_Vasco")) {
+       	    			vista.euskadi.setVisible(true);
+       	    			if (CiudadesTem.get(i).getNombre().equals("vitoria")) {
+       	    				String icono = temperature(CiudadesTem, i);
+       	    				vista.gasteiz.setIcon(new ImageIcon(icono));
+       	    				vista.gasteiz_1.setText(CiudadesTem.get(i).getTemMax()+"Cº");
+       	    				vista.gasteiz_1.setForeground(Color.BLUE);
+       	    				vista.gasteiz_2.setText(CiudadesTem.get(i).getTemMin()+"Cº");
+       	    				vista.gasteiz_2.setForeground(Color.RED);
+       	    			}
+       	    			if (CiudadesTem.get(i).getNombre().equals("san_sebastian")) {
+       	    				String icono = temperature(CiudadesTem, i);
+       	    				vista.sanctus.setIcon(new ImageIcon(icono));
+       	    				vista.sanctus_1.setText(CiudadesTem.get(i).getTemMax()+"Cº");
+       	    				vista.sanctus_1.setForeground(Color.BLUE);
+       	    				vista.sanctus_2.setText(CiudadesTem.get(i).getTemMin()+"Cº");
+       	    				vista.sanctus_2.setForeground(Color.RED);
+       	    			}
+       	    		}
+        			if(vista.listaComunidad.getSelectedItem().toString().equals("Castilla y Leon")) {
+       	    			vista.CYL.setVisible(true);
+       	    			if (CiudadesTem.get(i).getNombre().equals("valladolid")) {
+       	    				String icono = temperature(CiudadesTem, i);
+       	    				vista.Balad.setIcon(new ImageIcon(icono));
+       	    				vista.Balad_1.setText(CiudadesTem.get(i).getTemMax()+"Cº");
+       	    				vista.Balad_1.setForeground(Color.BLUE);
+       	    				vista.Balad_2.setText(CiudadesTem.get(i).getTemMin()+"Cº");
+       	    				vista.Balad_2.setForeground(Color.RED);
+       	    			}
+       	    			if (CiudadesTem.get(i).getNombre().equals("burgos")) {
+       	    				String icono = temperature(CiudadesTem, i);
+       	    				vista.numantia.setIcon(new ImageIcon(icono));
+       	    				vista.numantia_1.setText(CiudadesTem.get(i).getTemMax()+"Cº");
+       	    				vista.numantia_1.setForeground(Color.BLUE);
+       	    				vista.numantia_2.setText(CiudadesTem.get(i).getTemMin()+"Cº");
+       	    				vista.numantia_2.setForeground(Color.RED);
+       	    			}
+       	    			if (CiudadesTem.get(i).getNombre().equals("salamanca")) {
+       	    				String icono = temperature(CiudadesTem, i);
+       	    				vista.salamantica.setIcon(new ImageIcon(icono));
+       	    				vista.salamantica_1.setText(CiudadesTem.get(i).getTemMax()+"Cº");
+       	    				vista.salamantica_1.setForeground(Color.BLUE);
+       	    				vista.salamantica_2.setText(CiudadesTem.get(i).getTemMin()+"Cº");
+       	    				vista.salamantica_2.setForeground(Color.RED);
+       	    			}
+       	    			if (CiudadesTem.get(i).getNombre().equals("leon")) {
+       	    				String icono = temperature(CiudadesTem, i);
+       	    				vista.Legio.setIcon(new ImageIcon(icono));
+       	    				vista.Legio_1.setText(CiudadesTem.get(i).getTemMax()+"Cº");
+       	    				vista.Legio_1.setForeground(Color.BLUE);
+       	    				vista.Legio_2.setText(CiudadesTem.get(i).getTemMin()+"Cº");
+       	    				vista.Legio_2.setForeground(Color.RED);
+       	    			}
+       	    		}
+        			
+        			
         			if (CiudadesTem.get(i).getNombre().equals("barcelona")) {
         				String icono = temperature(CiudadesTem, i);
         				vista.barcelona.setIcon(new ImageIcon(icono));
