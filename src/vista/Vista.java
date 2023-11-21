@@ -17,6 +17,8 @@ import java.awt.Insets;
 import java.awt.Dimension;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.File;
+
 import javax.swing.JTextField;
 
 
@@ -34,7 +36,12 @@ import javax.swing.JSpinner;
 import java.awt.Font;
 import java.time.LocalDate;
 import java.awt.Color;
+
+import javax.sound.sampled.AudioSystem;
+import javax.sound.sampled.Clip;
 import javax.swing.DefaultComboBoxModel;
+import java.awt.SystemColor;
+import javax.swing.UIManager;
 
 public class Vista extends JFrame {
 	
@@ -78,6 +85,9 @@ public class Vista extends JFrame {
 	public JComboBox listaDias;
 	public JComboBox listaComunidad;
 	public JButton inicio;
+	private JLabel lblNewLabel_2;
+	private JLabel lblNewLabel_3;
+	private JLabel lblNewLabel_4;
 
 	/**
 	 * Launch the application.
@@ -145,12 +155,13 @@ public class Vista extends JFrame {
 		contentPane.add(lblNewLabel_1_1);
 		
 		 temperatura_Min = new JLabel("Not Found");
-		temperatura_Min.setForeground(Color.LIGHT_GRAY);
+		temperatura_Min.setForeground(new Color(30, 144, 255));
 		temperatura_Min.setBounds(387, 596, 67, 26);
 		contentPane.add(temperatura_Min);
 		
 		 temperatura_Max = new JLabel("Not Found");
-		temperatura_Max.setForeground(Color.LIGHT_GRAY);
+		 temperatura_Max.setBackground(Color.LIGHT_GRAY);
+		temperatura_Max.setForeground(new Color(255, 0, 0));
 		temperatura_Max.setBounds(217, 596, 67, 26);
 		contentPane.add(temperatura_Max);
 		
@@ -160,7 +171,7 @@ public class Vista extends JFrame {
 		contentPane.add(lblNewLabel_1_2);
 		
 		 nombre = new JLabel("Not Found");
-		nombre.setForeground(Color.LIGHT_GRAY);
+		nombre.setForeground(new Color(0, 0, 0));
 		nombre.setBounds(567, 596, 147, 26);
 		contentPane.add(nombre);
 		
@@ -172,7 +183,7 @@ public class Vista extends JFrame {
 		contentPane.add(Etiqueta_Tiempo);
 		
 		 tiempo_E = new JLabel("Not Found");
-		tiempo_E.setForeground(Color.LIGHT_GRAY);
+		tiempo_E.setForeground(new Color(255, 255, 255));
 		tiempo_E.setBounds(34, 596, 145, 26);
 		contentPane.add(tiempo_E);
 		
@@ -288,6 +299,7 @@ public class Vista extends JFrame {
 		leon.setContentAreaFilled(false); 
 		leon.setBorderPainted(false); 
 		leon.setFocusPainted(false);
+		
 		
 		 logrono = new JButton("");
 		logrono.setBounds(292, 92, 36, 31);
@@ -425,8 +437,13 @@ public class Vista extends JFrame {
 		contentPane.add(mapE);
 		
 		inicio = new JButton("Inicio");
+		inicio.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				 reproducirSonido("src/sound/marmota.aiff");
+			}
+		});
 		inicio.setIcon(new ImageIcon(Vista.class.getResource("/img/marmoteision.jpg")));
-		inicio.setBounds(680, 23, 193, 200);
+		inicio.setBounds(688, 23, 190, 200);
 		contentPane.add(inicio);
 		
 		listaDias = new JComboBox();
@@ -436,14 +453,42 @@ public class Vista extends JFrame {
 		contentPane.add(listaDias);
 		
 		JLabel lblNewLabel = new JLabel("Comunidad:");
+		lblNewLabel.setBackground(new Color(192, 192, 192));
 		lblNewLabel.setBounds(744, 278, 67, 13);
 		contentPane.add(lblNewLabel);
 		
 		JLabel lblNewLabel_1 = new JLabel("Fecha:");
 		lblNewLabel_1.setBounds(744, 364, 45, 13);
 		contentPane.add(lblNewLabel_1);
+		
+		lblNewLabel_3 = new JLabel("New label");
+		lblNewLabel_3.setIcon(new ImageIcon(Vista.class.getResource("/img/verde.jpg")));
+		lblNewLabel_3.setBounds(12, 550, 702, 89);
+		contentPane.add(lblNewLabel_3);
+		
+		lblNewLabel_4 = new JLabel("New label");
+		lblNewLabel_4.setIcon(new ImageIcon(Vista.class.getResource("/img/verde.jpg")));
+		lblNewLabel_4.setBounds(688, 260, 190, 194);
+		contentPane.add(lblNewLabel_4);
+		
+		lblNewLabel_2 = new JLabel("");
+		lblNewLabel_2.setIcon(new ImageIcon(Vista.class.getResource("/img/plato.jpg")));
+		lblNewLabel_2.setBackground(new Color(192, 192, 192));
+		lblNewLabel_2.setForeground(new Color(107, 157, 40));
+		lblNewLabel_2.setBounds(1, -23, 898, 708);
+		contentPane.add(lblNewLabel_2);
 	}
 	public static LocalDate diaSemana(LocalDate fecha, int dias) {
         return fecha.plusDays(dias);
+    }
+	public void reproducirSonido(String path) {
+        try {
+            File soundFile = new File("src/sound/marmota.aiff");
+            Clip clip = AudioSystem.getClip();
+            clip.open(AudioSystem.getAudioInputStream(soundFile));
+            clip.start();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 }
