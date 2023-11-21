@@ -498,9 +498,20 @@ public class Vista extends JFrame {
 	public void reproducirSonido(String path) {
         try {
             File soundFile = new File("src/sound/marmota.aiff");
+            File soundFile2 = new File("src/sound/hasbulla.aiff");
             Clip clip = AudioSystem.getClip();
             clip.open(AudioSystem.getAudioInputStream(soundFile));
             clip.start();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+	public void reproducirSonido2(String path) {
+        try {
+            File soundFile2 = new File("src/sound/hasbu.aiff");
+            Clip clip2 = AudioSystem.getClip();
+            clip2.open(AudioSystem.getAudioInputStream(soundFile2));
+            clip2.start();
         } catch (Exception e) {
             e.printStackTrace();
         }
