@@ -229,7 +229,7 @@ public class Vista extends JFrame {
 		euskadi.add(sanctus);
 		
 		lblNewLabel_10 = new JLabel("");
-		lblNewLabel_10.setIcon(new ImageIcon("C:\\Users\\Juan Carlos\\Downloads\\pais vasco.jpg"));
+		lblNewLabel_10.setIcon(new ImageIcon("src/img/pais vasco.jpg"));
 		lblNewLabel_10.setHorizontalAlignment(SwingConstants.CENTER);
 		lblNewLabel_10.setForeground(Color.WHITE);
 		lblNewLabel_10.setBackground(Color.WHITE);
@@ -279,7 +279,7 @@ public class Vista extends JFrame {
 		andalu.add(hispalis_2);
 		
 		lblNewLabel_9 = new JLabel("");
-		lblNewLabel_9.setIcon(new ImageIcon("C:\\Users\\Juan Carlos\\Downloads\\andalucia.jpg"));
+		lblNewLabel_9.setIcon(new ImageIcon("src/img/andalucia.jpg"));
 		lblNewLabel_9.setHorizontalAlignment(SwingConstants.CENTER);
 		lblNewLabel_9.setForeground(Color.WHITE);
 		lblNewLabel_9.setBackground(Color.WHITE);
@@ -318,7 +318,7 @@ public class Vista extends JFrame {
 		Arag.add(osca_2);
 		
 		lblNewLabel_8 = new JLabel("");
-		lblNewLabel_8.setIcon(new ImageIcon("C:\\Users\\Juan Carlos\\Downloads\\arag (1).png"));
+		lblNewLabel_8.setIcon(new ImageIcon("src/img/arag (1).png"));
 		lblNewLabel_8.setHorizontalAlignment(SwingConstants.CENTER);
 		lblNewLabel_8.setForeground(Color.WHITE);
 		lblNewLabel_8.setBackground(Color.WHITE);
@@ -380,7 +380,7 @@ public class Vista extends JFrame {
 		CYL.add(Legio);
 		
 		lblNewLabel_7 = new JLabel("");
-		lblNewLabel_7.setIcon(new ImageIcon("C:\\Users\\Juan Carlos\\Downloads\\castillayleon.jpg"));
+		lblNewLabel_7.setIcon(new ImageIcon("src/img/castillayleon.jpg"));
 		lblNewLabel_7.setHorizontalAlignment(SwingConstants.CENTER);
 		lblNewLabel_7.setForeground(Color.WHITE);
 		lblNewLabel_7.setBackground(Color.WHITE);
@@ -434,7 +434,7 @@ public class Vista extends JFrame {
 		lblNewLabel_6.setHorizontalAlignment(SwingConstants.CENTER);
 		lblNewLabel_6.setBounds(0, 0, 592, 539);
 		lblNewLabel_6.setForeground(new Color(255, 255, 255));
-		lblNewLabel_6.setIcon(new ImageIcon("C:\\Users\\Juan Carlos\\Downloads\\cataluna.jpg"));
+		lblNewLabel_6.setIcon(new ImageIcon("src/img/cataluna.jpg"));
 		lblNewLabel_6.setBackground(Color.WHITE);
 		cataluna.add(lblNewLabel_6);
 		
@@ -482,7 +482,7 @@ public class Vista extends JFrame {
 		
 		lblNewLabel_5 = new JLabel("");
 		lblNewLabel_5.setBackground(new Color(255, 255, 255));
-		lblNewLabel_5.setIcon(new ImageIcon("C:\\Users\\Juan Carlos\\Downloads\\castillalamancha.jpg"));
+		lblNewLabel_5.setIcon(new ImageIcon("src/img/castillalamancha.jpg"));
 		lblNewLabel_5.setBounds(1, 1, 592, 539);
 		CLM.add(lblNewLabel_5);
 		contentPane.add(Hasbulla);
