@@ -95,6 +95,7 @@ public class Vista extends JFrame {
 	private JPanel panelCastillaLeon;
 	private JPanel panelCataluna;
 	private JPanel panelAndalucia;
+	private JPanel panelCastillaLaMancha;
 
 	/**
 	 * Launch the application.
@@ -506,7 +507,9 @@ public class Vista extends JFrame {
 		panelAndalucia.setVisible(false);
 		ImageIcon imagenA;
 		imagenA = new ImageIcon("src/img/andalucia.png");
-		mostrarImagenEnPanel(panelCastillaLeon,imagenA);
+        JLabel labelImagen = new JLabel(imagenA);
+        panelAndalucia.add(labelImagen);
+        configurarPanelComunidad(panelAndalucia, "Andalucía");
 		
 		panelCataluna = new JPanel();
 		panelCataluna.setBounds(0, 0, 10, 10);
@@ -514,7 +517,9 @@ public class Vista extends JFrame {
 		panelCataluna.setVisible(false);
 		ImageIcon imagenC;
 		imagenC = new ImageIcon("src/img/cataluna.png");
-		mostrarImagenEnPanel(panelCastillaLeon,imagenC);
+		JLabel labelImagen1 = new JLabel(imagenC);
+		panelCataluna.add(labelImagen1);
+		 configurarPanelComunidad(panelCataluna, "Cataluña");
 		
 		panelCastillaLeon = new JPanel();
 		panelCastillaLeon.setBounds(0, 0, 10, 10);
@@ -522,15 +527,19 @@ public class Vista extends JFrame {
 		panelCastillaLeon.setVisible(false);
 		ImageIcon imagenCl;
 		imagenCl = new ImageIcon("src/img/castillayleon.png");
-		mostrarImagenEnPanel(panelCastillaLeon,imagenCl);
+		JLabel labelImagen2 = new JLabel(imagenCl);
+		panelCastillaLeon.add(labelImagen2);
+		configurarPanelComunidad(panelCastillaLeon, "Castilla y León");
 		
-		JPanel panelCastillaLaMancha = new JPanel();
+		panelCastillaLaMancha = new JPanel();
 		panelCastillaLaMancha.setBounds(1, 1, 898, 697);
 		contentPane.add(panelCastillaLaMancha);
 		panelCastillaLaMancha.setVisible(false);
 		ImageIcon imagenClm;
 		imagenClm = new ImageIcon("src/img/castillalamancha.png");
-		mostrarImagenEnPanel(panelCastillaLaMancha,imagenClm);
+		JLabel labelImagen3 = new JLabel(imagenClm);
+		panelCastillaLaMancha.add(labelImagen3);
+		configurarPanelComunidad(panelCastillaLaMancha, "Castilla-La Mancha");
 		
 	}
 	public static LocalDate diaSemana(LocalDate fecha, int dias) {
@@ -568,10 +577,7 @@ public class Vista extends JFrame {
 	        panel.setBorder(BorderFactory.createTitledBorder(nombreComunidad));
 	        getContentPane().add(panel, BorderLayout.CENTER);
 	    }
-	 private void mostrarImagenEnPanel(JPanel panel, ImageIcon imagen) {
-	        
-	        panel.removeAll();
-	 }
+	 
 	
 	 
 }
